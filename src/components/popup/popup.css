@@ -1,0 +1,22 @@
+#popup-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	height: 100vh;
+	width: 100vw;
+	background-color: "blue";
+	overflow: hidden;
+}
+.alert-box {
+	width: 34.3rem;
+	padding: 31px;
+	background-color: white;
+	border-radius: 25px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}

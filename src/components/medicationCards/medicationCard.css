@@ -1,0 +1,43 @@
+.card-container {
+	border: 1px solid gray;
+	border-radius: 25px;
+	padding: 10px 40px;
+	margin: 20px;
+	width: 100%;
+}
+
+.img-description-container {
+	display: flex;
+	flex-direction: row;
+}
+.test {
+	display: flex;
+	flex-direction: column;
+}
+img {
+	height: 100px;
+	width: 140px;
+	display: flex;
+}
+.description {
+	display: flex;
+
+	padding-left: 30px;
+}
+
+.btn-dosage-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.dosage {
+	display: flex;
+}
+.interaction-btn {
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 8px;
+	background-color: white;
+	height: max-content;
+	display: flex;
+}
