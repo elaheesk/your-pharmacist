@@ -18,6 +18,8 @@ const PainFever = ({ recommendedDrugs }: IProps) => {
 				const filteredArrayyyyy = recommendedDrugs.filter(
 					(drug: any) => drug.class === "1"
 				);
+				console.log("filteredArrayyyyy", filteredArrayyyyy);
+
 				setFilteredDrugs(filteredArrayyyyy);
 			}
 		};

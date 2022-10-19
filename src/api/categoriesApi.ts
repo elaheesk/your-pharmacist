@@ -50,19 +50,19 @@ export const stomachIssues = [
 		optionValue: "Heartburn and acid reflux",
 		class: "Heartburn and acid reflux",
 	},
-	{ optionValue: "Running worm", class: "Running worm" },
-	{ optionValue: "Motion sickness", class: "Motion sickness" },
-	{ optionValue: "Rectal discomfort", class: "Rectal discomfort" },
+	// { optionValue: "Running worm", class: "Running worm" },
+	// { optionValue: "Motion sickness", class: "Motion sickness" },
+	// { optionValue: "Rectal discomfort", class: "Rectal discomfort" },
 ];
 
 export const coldAndFlu = [
-	{ optionValue: "", class: "" },
-	{ optionValue: "Sinusitis", class: "Sinusitis" },
-	{ optionValue: "Cough", class: "Cough" },
 	{
 		optionValue: "Nasal congestion & rhinitis",
 		class: "Nasal congestion & rhinitis",
 	},
+	{ optionValue: "Sinusitis", class: "Sinusitis" },
+	{ optionValue: "Cough", class: "Cough" },
+
 	{
 		optionValue: "Sore throat",
 		class: "Sore throat",

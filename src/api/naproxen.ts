@@ -7,6 +7,26 @@ export const naproxen = {
 	timeLimit: false,
 	maxPeriod: "5 days",
 	interactionExists: true,
+	name: "Naproxen",
+	dosage: "250 mg",
+	quantity: "20 tablets",
+	drugGroup: "NSAID",
+	imageUrl:
+		"https://www.apotekhjartat.se/globalassets/inriver/resources/40721_front_center.jpg",
+	dosing: {
+		adults: "250-500 mg morning and evening, maximum 1,000 mg/day",
+		children: "",
+	},
+	maxDose: "1000 mg",
+	withMeal: true,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy:
+		"Naproxen Abece is should not be used during the third trimester of pregnancy",
+	breastfeeding:
+		"Naproxen passes into breast milk, but risk of impact on the baby seems unlikely at therapeutic doses",
 	indications: [
 		"pain",
 		"fever",
@@ -23,6 +43,7 @@ export const naproxen = {
 
 	description:
 		"Naproxen is a pain reliever, fever reducer and anti-inflammatory drug.It is used for mild to moderate acute pain, such as headaches, acute attacks of migraine, toothache, muscle and joint pain, backache, and for colds and menstrual cramps. Pronax can be used for short-term use up to 5 days against pain and 3 days against fever or migraine without a doctor's consultation. Full effect is achieved after about 2 hours.",
+
 	interactions: [
 		{
 			name: "Waran",
@@ -97,29 +118,5 @@ export const naproxen = {
 		"Difficulty falling asleep",
 		"difficulty concentrating",
 		"Visual disturbances",
-	],
-	about: [
-		{
-			name: "Naproxen",
-			dosage: "250 mg",
-			quantity: "20 tablets",
-			drugGroup: "NSAID",
-			imageUrl:
-				"https://www.apotekhjartat.se/globalassets/inriver/resources/40721_front_center.jpg",
-			dosing: {
-				adults: "250-500 mg morning and evening, maximum 1,000 mg/day",
-				children: "",
-			},
-			maxDose: "1000 mg",
-			withMeal: true,
-			betweenMeals: false,
-			infants: false,
-			adults: true,
-			minAge: "12",
-			pregnancy:
-				"Naproxen Abece is should not be used during the third trimester of pregnancy",
-			breastfeeding:
-				"Naproxen passes into breast milk, but risk of impact on the baby seems unlikely at therapeutic doses",
-		},
 	],
 };

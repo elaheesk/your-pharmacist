@@ -8,6 +8,25 @@ export const ibuprofen = {
 	timeLimit: true,
 	maxPeriod: "10 days",
 	interactionExists: true,
+	name: "Ipren",
+	dosage: "400 mg",
+	quantity: "30 tablets",
+	drugGroup: "NSAID",
+	imageUrl:
+		"https://media.apotea.se/product-images/L/ipren-filmdragerad-tablett-400-mg-30-st-0.jpg",
+	dosing: {
+		adults: "1 tablet 3 times per day, or 1 tablet every eigth hour. ",
+		children: "",
+	},
+	maxDose: "1200 mg",
+	withMeal: true,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy: " Should not be used during the third trimester of pregnancy",
+	breastfeeding:
+		"Ibuprofen passes into breast milk, but with therapeutic doses (maximum 1200 mg/day) during short-term treatment, the risk of impact on the child seems unlikely. If, on the other hand, longer treatment is prescribed, early weaning should be considered.",
 	indications: [
 		"pain",
 		"fever",
@@ -151,28 +170,5 @@ export const ibuprofen = {
 		"dyspepsia",
 		"nausea",
 		"vomiting",
-	],
-	about: [
-		{
-			name: "Ipren",
-			dosage: "400 mg",
-			quantity: "30 tablets",
-			drugGroup: "NSAID",
-			imageUrl:
-				"https://media.apotea.se/product-images/L/ipren-filmdragerad-tablett-400-mg-30-st-0.jpg",
-			dosing: {
-				adults: "1 tablet 3 times per day, or 1 tablet every eigth hour. ",
-				children: "",
-			},
-			maxDose: "1200 mg",
-			withMeal: true,
-			betweenMeals: false,
-			infants: false,
-			adults: true,
-			minAge: "12",
-			pregnancy: " Should not be used during the third trimester of pregnancy",
-			breastfeeding:
-				"Ibuprofen passes into breast milk, but with therapeutic doses (maximum 1200 mg/day) during short-term treatment, the risk of impact on the child seems unlikely. If, on the other hand, longer treatment is prescribed, early weaning should be considered.",
-		},
 	],
 };

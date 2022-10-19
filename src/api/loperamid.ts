@@ -8,6 +8,27 @@ export const loperamid = {
 	timeLimit: false,
 	maxPeriod: "",
 	interactionExists: true,
+	name: "Dimor",
+	dosage: "2 mg",
+	quantity: "16 tablets",
+	drugGroup: "Propulsionsdämpande medel",
+	imageUrl:
+		"https://media.apotea.se/product-images/L/dimor-filmdragerad-tablett-2-mg-16-st-1.jpg",
+	dosing: {
+		adults:
+			"Treatment begins with 4 mg. Then 2 mg after each bowel movement with diarrhoea. However, wait 2-3 hours between the first and second dose. The daily dose should not exceed 16 mg (8 tablets).",
+		children: "",
+	},
+	maxDose: "16 mg",
+	withMeal: false,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy:
+		"Women who are pregnant or breastfeeding should be advised to consult a doctor for appropriate treatment.",
+	breastfeeding:
+		"Loperamide can pass into breast milk in small amounts. Therefore, Dimor is not recommended during breastfeeding.",
 	indications: [
 		"Symptomatic treatment of acute non-specific diarrheas and chronic diarrheal conditions",
 		"Too fast bowel passage, with or without faecal incontinence and in connection with ileostomies, colostomies and dumping.",
@@ -63,29 +84,4 @@ export const loperamid = {
 		},
 	],
 	sideEffects: ["Constipation", "nausea", "flatulence", "Headache"],
-	about: [
-		{
-			name: "Dimor",
-			dosage: "2 mg",
-			quantity: "16 tablets",
-			drugGroup: "Propulsionsdämpande medel",
-			imageUrl:
-				"https://media.apotea.se/product-images/L/dimor-filmdragerad-tablett-2-mg-16-st-1.jpg",
-			dosing: {
-				adults:
-					"Treatment begins with 4 mg. Then 2 mg after each bowel movement with diarrhoea. However, wait 2-3 hours between the first and second dose. The daily dose should not exceed 16 mg (8 tablets).",
-				children: "",
-			},
-			maxDose: "16 mg",
-			withMeal: false,
-			betweenMeals: false,
-			infants: false,
-			adults: true,
-			minAge: "12",
-			pregnancy:
-				"Women who are pregnant or breastfeeding should be advised to consult a doctor for appropriate treatment.",
-			breastfeeding:
-				"Loperamide can pass into breast milk in small amounts. Therefore, Dimor is not recommended during breastfeeding.",
-		},
-	],
 };

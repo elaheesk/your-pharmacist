@@ -7,6 +7,27 @@ export const xylometazolin = {
 	timeLimit: true,
 	maxPeriod: "10 days",
 	interactionExists: false,
+	name: "Otrivin",
+	dosage: "1 mg/ml",
+	quantity: "10 ml",
+	drugGroup: "Sympathomimetic",
+	imageUrl:
+		"https://media.apotea.se/product-images/L/otrivin-nasspray-1-mg-per-ml-10-ml-3.jpg",
+	dosing: {
+		adults:
+			"Adults and children over 12 years: 1 spray shower in each nostril if necessary 2-3 times daily for a maximum of 10 days. (If used for a long time, Otrivin may cause nasal congestion or again trigger a runny nose.)",
+		children: "",
+	},
+	maxDose: "1mg/ml",
+	withMeal: false,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy:
+		"Otrivin should not be used by pregnant women unless prescribed by a doctor.",
+	breastfeeding:
+		"Otrivin should not be used by breastfeeding women unless prescribed by a doctor.",
 	indications: [
 		"Rhinitis. As a decongestant for coryza",
 		"facilitate rhinoscopy (examination of the nose).",
@@ -39,30 +60,5 @@ export const xylometazolin = {
 		"Nausea",
 		"burning or local irritation in the nose, dry nasal mucosa",
 		"Headache",
-	],
-	about: [
-		{
-			name: "Otrivin",
-			dosage: "1 mg/ml",
-			quantity: "10 ml",
-			drugGroup: "Sympathomimetic",
-			imageUrl:
-				"https://media.apotea.se/product-images/L/otrivin-nasspray-1-mg-per-ml-10-ml-3.jpg",
-			dosing: {
-				adults:
-					"Adults and children over 12 years: 1 spray shower in each nostril if necessary 2-3 times daily for a maximum of 10 days. (If used for a long time, Otrivin may cause nasal congestion or again trigger a runny nose.)",
-				children: "",
-			},
-			maxDose: "1mg/ml",
-			withMeal: false,
-			betweenMeals: false,
-			infants: false,
-			adults: true,
-			minAge: "12",
-			pregnancy:
-				"Otrivin should not be used by pregnant women unless prescribed by a doctor.",
-			breastfeeding:
-				"Otrivin should not be used by breastfeeding women unless prescribed by a doctor.",
-		},
 	],
 };

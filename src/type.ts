@@ -16,8 +16,26 @@ export interface InteractionProps {
 	suggestions: string;
 }
 
-export interface AboutProps {
+
+
+
+
+export interface DrugType {
+	id: number;
+	otcDrug: string;
+	categories: string;
+	class: string;
+	activeSubstance: NameProps[];
 	name: string;
+	timeLimit: boolean;
+	maxPeriod: string;
+	interactionExists: boolean;
+	indications: string[];
+	contraindications: string[];
+	pharmacodynamics: string;
+	description: string;
+	interactions: InteractionProps[];
+	sideEffects: string[];
 	dosage: string;
 	quantity: string;
 	drugGroup: string;
@@ -31,22 +49,4 @@ export interface AboutProps {
 	minAge: string;
 	pregnancy: string;
 	breastfeeding: string;
-}
-
-export interface DrugType {
-	id: number;
-	otcDrug: string;
-	categories: string;
-	class: string;
-	activeSubstance: NameProps[];
-	timeLimit: boolean;
-	maxPeriod: string;
-	interactionExists: boolean;
-	indications: string[];
-	contraindications: string[];
-	pharmacodynamics: string;
-	description: string;
-	interactions: InteractionProps[];
-	sideEffects: string[];
-	about: AboutProps[];
 }

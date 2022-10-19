@@ -1,8 +1,30 @@
 .main-container {
 	padding: 30px;
 }
+.link-input-container {
+	display: flex;
+	width: 80%;
+	flex-direction: row;
+	justify-content: space-around;
+}
 .Links {
-	padding-left: 15px;
+	display: flex;
+	/* padding-left: 15px; */
 	font-size: 20px;
 	font-weight: bolder;
+}
+input {
+	display: flex;
+}
+
+/* .prewords-container {
+	display: flex;
+} */
+@media only screen and (max-width: 600px) {
+	.link-input-container {
+		flex-direction: column;
+	}
+	input {
+		margin: 15px 0;
+	}
 }

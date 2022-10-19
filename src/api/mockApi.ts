@@ -8,10 +8,11 @@
 //class:8 =Antimykotikum AND glukokortikoid
 //class:9 =Contraceptives
 
+import { acetylsalicylsyraTreo } from "./acetylsalicylsyraTreo";
 import { ibuprofen } from "./ibuprofen";
 
-
 import { loperamid } from "./loperamid";
+import { makrogol } from "./makrogol";
 
 import { naproxen } from "./naproxen";
 import { noskapin } from "./noskapin";
@@ -26,9 +27,11 @@ export const medicines = {
 		paracetamol,
 		ibuprofen,
 		naproxen,
-		xylometazolin,
+		acetylsalicylsyraTreo,
 		omeprazol,
 		loperamid,
+		makrogol,
+		xylometazolin,
 		noskapin,
 	],
 };

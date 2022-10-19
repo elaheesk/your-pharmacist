@@ -7,7 +7,30 @@ export const paracetamol = {
 	timeLimit: false,
 	maxPeriod: "",
 	interactionExists: true,
+
+	name: "Alvedon",
+	dosage: "500 mg",
+	quantity: "20 tablets",
+	drugGroup: "",
+	imageUrl:
+		"https://media.apotea.se/product-images/L/alvedon-filmdragerad-tablett-500-mg-20-st-0.jpg",
+	dosing: {
+		adults: "1-2 tabletter var 4–6 timme, högst 4 gånger per dygn.",
+		children: "",
+	},
+	maxDose: "4 g (4000 mg)",
+	withMeal: false,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy:
+		"Studies have shown that Paracetamol is ok to take during pregnancy",
+	breastfeeding:
+		"Paracetamol passes into breast milk, but the risk of impact on the baby seems unlikely with therapeutic doses",
+
 	indications: ["pain", "fever"],
+
 	contraindications: [
 		"Hypersensitivity to the active substance or to any excipient",
 		"Severe liver failure",
@@ -33,29 +56,4 @@ export const paracetamol = {
 	],
 
 	sideEffects: [""],
-
-	about: [
-		{
-			name: "Alvedon",
-			dosage: "500 mg",
-			quantity: "20 tablets",
-			drugGroup: "",
-			imageUrl:
-				"https://media.apotea.se/product-images/L/alvedon-filmdragerad-tablett-500-mg-20-st-0.jpg",
-			dosing: {
-				adults: "1-2 tabletter var 4–6 timme, högst 4 gånger per dygn.",
-				children: "",
-			},
-			maxDose: "4 g (4000 mg)",
-			withMeal: false,
-			betweenMeals: false,
-			infants: false,
-			adults: true,
-			minAge: "12",
-			pregnancy:
-				"Studies have shown that Paracetamol is ok to take during pregnancy",
-			breastfeeding:
-				"Paracetamol passes into breast milk, but the risk of impact on the baby seems unlikely with therapeutic doses",
-		},
-	],
 };

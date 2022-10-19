@@ -12,29 +12,19 @@ import { DrugType } from "./type";
 
 const App = () => {
 	const [recommendedDrugs, setRecommendedDrugs] = useState<any[]>([]);
-	const [filteredDrugs, setFilteredDrugs] = useState<any[]>([]);
-	const [inputValue, setInputValue] = useState<string>("");
 
-	const handleSelectedClass = (opt: string) => {
-		if (recommendedDrugs.length !== 0) {
-			const filteredArrayyyyy = recommendedDrugs.filter(
-				(drug: any) => drug.class === opt
-			);
-			setFilteredDrugs(filteredArrayyyyy);
-		}
-	};
+	
 
-	const handleSelectedCategory = (opt: string) => {
-		setInputValue(opt);
-		if (recommendedDrugs.length !== 0) {
-			const filteredArrayyyyy = recommendedDrugs.filter(
-				(drug: any) => drug.categories === opt
-			);
-			console.log(" körs denna? filteredArrayyyyy", filteredArrayyyyy);
+	// const handleSelectedCategory = (opt: string) => {
+	// 	setInputValue(opt);
+	// 	if (recommendedDrugs.length !== 0) {
+	// 		const filteredArrayyyyy = recommendedDrugs.filter(
+	// 			(drug: any) => drug.categories === opt
+	// 		);
 
-			setFilteredDrugs(filteredArrayyyyy);
-		}
-	};
+	// 		setFilteredDrugs(filteredArrayyyyy);
+	// 	}
+	// };
 
 	useEffect(() => {
 		const timer = setTimeout(() => setRecommendedDrugs(medicines.data), 500);
@@ -47,15 +37,7 @@ const App = () => {
 			<Routes>
 				<Route
 					path="/"
-					element={
-						<Home
-							recommendedDrugs={recommendedDrugs}
-							filteredDrugs={filteredDrugs}
-							inputValue={inputValue}
-							setInputValue={setInputValue}
-							handleSelectedClass={handleSelectedClass}
-						/>
-					}
+					element={<Home recommendedDrugs={recommendedDrugs} />}
 				/>
 				<Route
 					path="/painfever"

@@ -1,0 +1,20 @@
+.sidebar-card-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.sidebar-parent {
+	display: flex;
+	width: 25%;
+	flex-direction: column;
+}
+.sidebar-options {
+	display: flex;
+	padding: 10px;
+	color: dodgerblue;
+	border: none;
+	background-color: white;
+}
+.card-container {
+	width: 75%;
+}
