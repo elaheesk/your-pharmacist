@@ -61,6 +61,7 @@ export const coldAndFlu = [
 		class: "Nasal congestion & rhinitis",
 	},
 	{ optionValue: "Sinusitis", class: "Sinusitis" },
+	
 	{ optionValue: "Cough", class: "Cough" },
 
 	{

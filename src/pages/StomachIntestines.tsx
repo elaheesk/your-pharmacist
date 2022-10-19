@@ -1,11 +1,10 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { stomachIssues } from "../api/categoriesApi";
 import { MedicationCard } from "../components/medicationCards";
 import { DrugType } from "../type";
 import { IProps } from "./PainFever";
-
+import { RiArrowLeftLine } from "react-icons/ri";
 import "./page.css";
 
 const StomachIntestines = ({ recommendedDrugs }: IProps) => {
@@ -36,8 +35,10 @@ const StomachIntestines = ({ recommendedDrugs }: IProps) => {
 		}
 	};
 	return (
-		<>
-			<button onClick={() => navigate("/")}>Go back to home</button>
+		<div className="page-container">
+			<button className="go-back-btn" onClick={() => navigate("/")}>
+				<RiArrowLeftLine className="go-back-icon" /> Go back to home
+			</button>
 			<div className="sidebar-card-container">
 				<div className="sidebar-parent">
 					{stomachIssues.map((eachCateg, idx) => (
@@ -55,7 +56,7 @@ const StomachIntestines = ({ recommendedDrugs }: IProps) => {
 					<MedicationCard drug={drug} key={idx} />
 				))}
 			</div>
-		</>
+		</div>
 	);
 };
 export default StomachIntestines;

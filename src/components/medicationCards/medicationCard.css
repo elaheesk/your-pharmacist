@@ -1,43 +1,78 @@
 .card-container {
-	border: 1px solid gray;
-	border-radius: 25px;
-	padding: 10px 40px;
-	margin: 20px;
-	width: 100%;
+	margin-bottom: 30px;
+}
+label {
+	font-weight: bold;
+}
+.img-description-container {
+	padding-top: 10px;
 }
 
-.img-description-container {
-	display: flex;
-	flex-direction: row;
-}
-.test {
-	display: flex;
-	flex-direction: column;
-}
 img {
 	height: 100px;
 	width: 140px;
-	display: flex;
-}
-.description {
-	display: flex;
-
-	padding-left: 30px;
 }
 
-.btn-dosage-container {
+.btn-minage-container {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 }
-.dosage {
+.dosag-mobileSize {
 	display: flex;
+}
+.dosag-tabletSize {
+	display: none;
 }
 .interaction-btn {
+	display: flex;
 	border: 1px solid gray;
 	border-radius: 10px;
 	padding: 8px;
 	background-color: white;
-	height: max-content;
-	display: flex;
+	width: 70%;
+	cursor: pointer;
+}
+.interaction-btn :hover {
+	color: black;
+}
+
+@media only screen and (min-width: 768px) {
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 10px;
+	}
+	.img-description-container {
+		display: flex;
+		flex-direction: row;
+	}
+	img {
+		display: flex;
+	}
+	.drug-description {
+		display: flex;
+		padding-left: 25px;
+	}
+	.dosag-mobileSize {
+		display: none;
+	}
+	.dosag-tabletSize {
+		display: flex;
+	}
+	.btn-minage-container {
+		align-items: flex-end;
+	}
+	.interaction-btn {
+		justify-content: center;
+		width: 40%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

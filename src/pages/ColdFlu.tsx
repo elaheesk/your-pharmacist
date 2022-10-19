@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { coldAndFlu } from "../api/categoriesApi";
 import { MedicationCard } from "../components/medicationCards";
 import { DrugType } from "../type";
-import "./page.css";
+import { RiArrowLeftLine } from "react-icons/ri";
 import { IProps } from "./PainFever";
+import "./page.css";
 
 const ColdFlu = ({ recommendedDrugs }: IProps) => {
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
@@ -35,8 +36,10 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 	};
 
 	return (
-		<>
-			<button onClick={() => navigate("/")}>Go back to home</button>
+		<div className="page-container">
+			<button className="go-back-btn" onClick={() => navigate("/")}>
+				<RiArrowLeftLine className="go-back-icon" /> Go back to home
+			</button>
 			<div className="sidebar-card-container">
 				<div className="sidebar-parent">
 					{coldAndFlu.map((eachCateg, idx) => (
@@ -54,7 +57,7 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 					))}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 export default ColdFlu;

@@ -1,11 +1,14 @@
-.sidebar-card-container {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
+.page-container {
+	padding: 10px;
 }
+.go-back-btn {
+	border: none;
+	outline: none;
+	background-color: white;
+}
+
 .sidebar-parent {
 	display: flex;
-	width: 25%;
 	flex-direction: column;
 }
 .sidebar-options {
@@ -14,7 +17,8 @@
 	color: dodgerblue;
 	border: none;
 	background-color: white;
+	font-size: 18px;
 }
 .card-container {
-	width: 75%;
+	margin-top: 10px;
 }

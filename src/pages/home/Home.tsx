@@ -4,7 +4,7 @@ import { medicines } from "../../api";
 
 import { CategoriesBar } from "../../components/categoriesBar";
 import { MedicationCard } from "../../components/medicationCards";
-import { DrugType } from "../../type";
+import { DrugType, NameProps } from "../../type";
 import { Link, useNavigate } from "react-router-dom";
 
 interface PageProps {
@@ -16,22 +16,27 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 
 	useEffect(() => {
 		if (inputValue) {
-			const filteredResponse = recommendedDrugs.filter((searched: DrugType) => {
-				return searched?.name
+			const filteredResponse = recommendedDrugs.filter((searched: DrugType) =>
+				searched?.name
 					?.toLocaleLowerCase()
-					.startsWith(inputValue.toLocaleLowerCase());
-				// searched?.activeSubstance.map((subst) =>
-				// 	subst.name
-				// 		.toLocaleLowerCase()
-				// 		.startsWith(inputValue.toLocaleLowerCase())
-				// )
-			});
+					.startsWith(inputValue.toLocaleLowerCase())
+			);
+			// ||
+			// recommendedDrugs.filter((searched: any) => {
+			// 	return searched?.activeSubstance.map((subst: NameProps) =>
+			// 		subst?.name
+			// 			.toLocaleLowerCase()
+			// 			.includes(inputValue.toLocaleLowerCase())
+			// 	);
+			// });
+			console.log(filteredResponse, "filteredResponse");
 
 			setFilteredDrugs(filteredResponse);
 		} else {
 			setFilteredDrugs(recommendedDrugs);
 		}
 	}, [recommendedDrugs, inputValue]);
+	console.log("input", inputValue);
 
 	return (
 		<div className="main-container">
@@ -49,6 +54,7 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 				</Link>
 				<input
 					value={inputValue}
+					placeholder="Name of the medicine"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 						setInputValue(e.target.value)
 					}
@@ -72,12 +78,11 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 					what the patient should pay attention to.
 				</p>
 			</div>
-			<div>
-				{filteredDrugs.length !== 0 &&
-					filteredDrugs.map((drug: DrugType) => (
-						<MedicationCard drug={drug} key={drug.id} />
-					))}
-			</div>
+
+			{filteredDrugs.length !== 0 &&
+				filteredDrugs.map((drug: DrugType) => (
+					<MedicationCard drug={drug} key={drug.id} />
+				))}
 		</div>
 	);
 };

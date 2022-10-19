@@ -9,39 +9,47 @@ interface CardProps {
 
 export const MedicationCard = ({ drug }: CardProps) => {
 	const [showAlert, setShowAlert] = useState<boolean>(false);
-	useEffect(() => {}, []);
+	useEffect(() => {
+		console.log("showale", showAlert);
+		console.log(
+			"drugname",
+			drug.interactions.map((int) => int.name)
+		);
+	}, [showAlert]);
 
 	return (
 		<>
-			{showAlert ? <Popup drug={drug} setShowAlert={setShowAlert} /> : null}
 			<div className="card-container" key={drug?.id}>
-				{drug?.activeSubstance.length !== 0 &&
-					drug?.activeSubstance.map((substance, idx) => (
-						<h4 key={idx}>{substance.name}</h4>
-					))}
+				{drug?.activeSubstance.map((substance, idx) => (
+					<label key={idx}>{substance.name}</label>
+				))}
 
 				<div className="img-description-container">
-					<div className="test">
-						<img alt="medicin image " src={drug?.imageUrl} />
-						<p className="dosage">
-							{drug?.dosage} {drug?.quantity}
-						</p>
-					</div>
-
-					<p className="description">{drug?.description}</p>
+					<img alt="medicin image " src={drug?.imageUrl} />
+					<p className="dosag-mobileSize">
+						{drug?.dosage} {drug?.quantity}
+					</p>
+					<p className="drug-description">{drug?.description}</p>
 				</div>
-
-				<div className="btn-dosage-container">
-					<div>
-						<p className="dosage">From {drug?.minAge} years</p>
-						{drug.otcDrug ? <p>Detta är ett receptfrit läkemedel</p> : <></>}
-					</div>
-
-					<button
-						className="interaction-btn"
-						onClick={() => setShowAlert(!showAlert)}>
-						See interactions with other medicines
-					</button>
+				<p className="dosag-tabletSize">
+					{drug?.dosage} {drug?.quantity}
+				</p>
+				{drug.otcDrug ? <p>Detta är ett receptfrit läkemedel</p> : <></>}
+				{showAlert ? (
+					<Popup drug={drug} setShowAlert={setShowAlert} />
+				) : (
+					<p className="minage">From {drug?.minAge} years</p>
+				)}
+				<div className="btn-minage-container">
+					{!showAlert ? (
+						<button
+							className="interaction-btn"
+							onClick={() => setShowAlert(!showAlert)}>
+							Interactions with other drugs
+						</button>
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</>

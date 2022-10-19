@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MedicationCard } from "../components/medicationCards";
+import { RiArrowLeftLine } from "react-icons/ri";
 import Popup from "../components/popup/Popup";
 
 export interface IProps {
@@ -26,12 +27,14 @@ const PainFever = ({ recommendedDrugs }: IProps) => {
 		handleSelectedClass();
 	}, [recommendedDrugs]);
 	return (
-		<>
-			<button onClick={() => navigate("/")}>Go back to home</button>
+		<div className="page-container">
+			<button className="go-back-btn" onClick={() => navigate("/")}>
+				<RiArrowLeftLine className="go-back-icon" /> Go back to home
+			</button>
 			{filteredDrugs.map((drug, idx) => (
 				<MedicationCard drug={drug} key={idx} />
 			))}
-		</>
+		</div>
 	);
 };
 export default PainFever;
