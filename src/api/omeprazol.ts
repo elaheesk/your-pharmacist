@@ -8,19 +8,19 @@ export const omeprazol = {
 	maxPeriod: "14 days",
 	interactionExists: true,
 	name: "Omeprazol",
-	dosage: "20 mg",
-	quantity: "28 enteric capsules",
+	dosage: "20mg,",
+	quantity: "28 Enteric capsules",
 	drugGroup: "Proton pump inhibitors",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/omeprazol-sandoz-enterokapsel-h%c3%a5rd-20-mg-28-st-0.jpg",
 	dosing: {
 		adults:
-			"1 capsule once daily for 14 days. Contact a doctor if you are not symptom-free after this period.It may be necessary to take the capsules for 2-3 days in a row to achieve symptom relief",
+			"1 capsule once daily for 14 days. Contact a doctor if you are not symptom-free after this period.It may be necessary to take the capsules for 2-3 days in a row to achieve symptom relief. To get the best effect, you should take the PPI about 30 minutes before the first meal of the day, regardless of what time of day the discomfort is at its greatest.",
 		children: "",
 	},
 	maxDose: "40 mg",
 	withMeal: false,
-	betweenMeals: false,
+	betweenMeals: true,
 	infants: false,
 	adults: true,
 	minAge: "12",
@@ -66,6 +66,6 @@ export const omeprazol = {
 		"flatulence",
 		"nausea/vomiting",
 		"fundic gland polyps (benign)",
-		"Headache",
+		"headache",
 	],
 };

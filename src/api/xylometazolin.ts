@@ -8,7 +8,7 @@ export const xylometazolin = {
 	maxPeriod: "10 days",
 	interactionExists: false,
 	name: "Otrivin",
-	dosage: "1 mg/ml",
+	dosage: "1mg/ml,",
 	quantity: "10 ml",
 	drugGroup: "Sympathomimetic",
 	imageUrl:

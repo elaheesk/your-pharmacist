@@ -7,8 +7,8 @@ export const bromhexidin = {
 	timeLimit: true,
 	maxPeriod: "14 days",
 	interactionExists: true,
-	name: "Bisolvon",
-	dosage: "1,6 mg/ml",
+	name: "Bisolvon,",
+	dosage: "1,6mg/ml",
 	quantity: "125 ml oral solution",
 	drugGroup: "Mucolytics",
 	imageUrl:

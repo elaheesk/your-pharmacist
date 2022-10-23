@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import "./home.css";
-import { medicines } from "../../api";
 
-import { CategoriesBar } from "../../components/categoriesBar";
 import { MedicationCard } from "../../components/medicationCards";
 import { DrugType, NameProps } from "../../type";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface PageProps {
 	recommendedDrugs: any;
@@ -13,7 +11,7 @@ interface PageProps {
 const Home = ({ recommendedDrugs }: PageProps) => {
 	const [inputValue, setInputValue] = useState<string>("");
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
-
+	const [showDropdown, setShowDropdown] = useState<boolean>(false);
 	useEffect(() => {
 		if (inputValue) {
 			const filteredResponse = recommendedDrugs.filter((searched: DrugType) =>
@@ -21,37 +19,44 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 					?.toLocaleLowerCase()
 					.startsWith(inputValue.toLocaleLowerCase())
 			);
-			// ||
-			// recommendedDrugs.filter((searched: any) => {
-			// 	return searched?.activeSubstance.map((subst: NameProps) =>
-			// 		subst?.name
-			// 			.toLocaleLowerCase()
-			// 			.includes(inputValue.toLocaleLowerCase())
-			// 	);
-			// });
-			console.log(filteredResponse, "filteredResponse");
 
 			setFilteredDrugs(filteredResponse);
 		} else {
 			setFilteredDrugs(recommendedDrugs);
 		}
 	}, [recommendedDrugs, inputValue]);
-	console.log("input", inputValue);
+
+	const strAscending = () => {
+		const copyArray = [...filteredDrugs];
+		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? 1 : -1));
+		console.log("asc", sortedArr);
+		setFilteredDrugs(sortedArr);
+	};
+
+	// 👇️ sort by String property DESCENDING (Z - A)
+	const strDescending = () => {
+		const copyArray = [...filteredDrugs];
+		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? -1 : 1));
+		console.log("dsc", sortedArr);
+		setFilteredDrugs(sortedArr);
+	};
 
 	return (
 		<div className="main-container">
-			<h4>Elahes recommendations</h4>
-			<div className="link-input-container">
-				<Link className="Links" to="/painfever">
+			<h3 className="main-title">Elahes recommendations</h3>
+			<div className="link-container">
+				<Link className="links" to="/painfever">
 					Pain & fever{" "}
 				</Link>
 
-				<Link className="Links" to="/coldflu">
+				<Link className="links" to="/coldflu">
 					cold & flu
 				</Link>
-				<Link className="Links" to="/stomach">
+				<Link className="links" to="/stomach">
 					Stomach & intestines
 				</Link>
+			</div>
+			<div className="filtrer-sort-container">
 				<input
 					value={inputValue}
 					placeholder="Name of the medicine"
@@ -60,7 +65,30 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 					}
 					type="text"
 				/>
+				<div className="sort-container">
+					<button
+						className="sort-btn"
+						onClick={() => setShowDropdown(!showDropdown)}>
+						Sort
+					</button>
+					<div className="sort-dropdown">
+						{showDropdown ? (
+							<>
+								<button className="sort-btn" onClick={strAscending}>
+									A to Z
+								</button>
+
+								<button className="sort-btn" onClick={strDescending}>
+									Z to A
+								</button>
+							</>
+						) : (
+							<></>
+						)}
+					</div>
+				</div>
 			</div>
+
 			<div className="prewords-container">
 				<p className="prewords">
 					The drug-related injuries make up a large part of the healthcare

@@ -9,8 +9,8 @@ export const ibuprofen = {
 	maxPeriod: "10 days",
 	interactionExists: true,
 	name: "Ipren",
-	dosage: "400 mg",
-	quantity: "30 tablets",
+	dosage: "400mg,",
+	quantity: "30 Tablets",
 	drugGroup: "NSAID",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/ipren-filmdragerad-tablett-400-mg-30-st-0.jpg",
@@ -102,7 +102,7 @@ export const ibuprofen = {
 			interactionType: "",
 			consequence:
 				"Increased risk of ulcerations and gastrointestinal bleeding due to enhanced effects.",
-			suggestions: "",
+			suggestions: "Combination should be avoided",
 		},
 		{
 			name: "Waran",
@@ -165,7 +165,7 @@ export const ibuprofen = {
 		},
 	],
 	sideEffects: [
-		"abdominal pain",
+		"Abdominal pain",
 		"diarrhoea",
 		"dyspepsia",
 		"nausea",

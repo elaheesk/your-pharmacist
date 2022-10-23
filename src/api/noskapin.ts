@@ -8,8 +8,8 @@ export const noskapin = {
 	maxPeriod: "14 days",
 	interactionExists: true,
 	name: "Nipaxon",
-	dosage: "50 mg",
-	quantity: "30 tablets",
+	dosage: "50mg,",
+	quantity: "30 Tablets",
 	drugGroup: "opium derivatives",
 	imageUrl:
 		"https://media.apotea.se/product-images/XL/nipaxon-tablett-50-mg-30-st-1-0.jpg",
@@ -19,7 +19,7 @@ export const noskapin = {
 	},
 	maxDose: "150 mg",
 	withMeal: false,
-	betweenMeals: false,
+	betweenMeals: true,
 	infants: false,
 	adults: true,
 	minAge: "10",
@@ -48,27 +48,5 @@ export const noskapin = {
 			suggestions: "The combination should be avoided",
 		},
 	],
-	sideEffects: ["Abdominal pain", "Headache", "Somnolence"],
-
-	// {
-	// 	name: "Nipaxon",
-	// 	dosage: "2,5 mg/ml",
-	// 	quantity: "100 ml",
-	// 	drugGroup: "opium derivatives",
-	// 	imageUrl: "https://media.apotea.se/product-images/L/7347-1.jpg",
-	// 	dosing: {
-	// 		adults: "20 ml 3 times daily",
-	// 		children:
-	// 			"Children 2-4 years: 2,5 ml 3-4 times daily, 4-10 years: 5 ml 3-4 times daily, 10-14 years: 10 ml 3 times daily,, 14 years and adults: 20 ml  3 times daily. Nipaxon  should not be given to children under 2 years of age.",
-	// 	},
-	// 	maxDose: "",
-	// 	withMeal: false,
-	// 	betweenMeals: false,
-	// 	infants: false,
-	// 	adults: true,
-	// 	minAge: "2",
-	// 	pregnancy: "No known risks when used during pregnancy.",
-	// 	breastfeeding:
-	// 		"Noscapine passes into breast milk, but risk of impact on the baby seems unlikely with therapeutic doses.",
-	// },
+	sideEffects: ["Abdominal pain", "headache", "somnolence"],
 };

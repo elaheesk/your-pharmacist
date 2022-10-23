@@ -9,8 +9,8 @@ export const loperamid = {
 	maxPeriod: "",
 	interactionExists: true,
 	name: "Dimor",
-	dosage: "2 mg",
-	quantity: "16 tablets",
+	dosage: "2mg,",
+	quantity: "16 Tablets",
 	drugGroup: "Propulsionsdämpande medel",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/dimor-filmdragerad-tablett-2-mg-16-st-1.jpg",
@@ -83,5 +83,5 @@ export const loperamid = {
 				"Monitoring for loperamide-induced opioid-like side effects is recommended (eg, fatigue, nausea, and vomiting).",
 		},
 	],
-	sideEffects: ["Constipation", "nausea", "flatulence", "Headache"],
+	sideEffects: ["Constipation", "nausea", "flatulence", "headache"],
 };

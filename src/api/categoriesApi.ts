@@ -43,7 +43,6 @@ export const problemsOptions = [
 ];
 
 export const stomachIssues = [
-	{ optionValue: "", class: "" },
 	{ optionValue: "Diarrhea", class: "Diarrhea" },
 	{ optionValue: "Constipation", class: "Constipation" },
 	{
@@ -61,11 +60,18 @@ export const coldAndFlu = [
 		class: "Nasal congestion & rhinitis",
 	},
 	{ optionValue: "Sinusitis", class: "Sinusitis" },
-	
+
 	{ optionValue: "Cough", class: "Cough" },
 
 	{
 		optionValue: "Sore throat",
 		class: "Sore throat",
 	},
+];
+export const painAndFever = [
+	{
+		optionValue: "Migraine",
+		class: "Migraine",
+	},
+	{ optionValue: "Analgesic & Antipyretic", class: "Analgesic & Antipyretic" },
 ];

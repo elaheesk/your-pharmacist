@@ -8,8 +8,8 @@ export const naproxen = {
 	maxPeriod: "5 days",
 	interactionExists: true,
 	name: "Naproxen",
-	dosage: "250 mg",
-	quantity: "20 tablets",
+	dosage: "250mg,",
+	quantity: "20 Tablets",
 	drugGroup: "NSAID",
 	imageUrl:
 		"https://www.apotekhjartat.se/globalassets/inriver/resources/40721_front_center.jpg",
@@ -106,7 +106,7 @@ export const naproxen = {
 		},
 	],
 	sideEffects: [
-		"abdominal pain",
+		"Abdominal pain",
 		"diarrhoea",
 		"dyspepsia",
 		"nausea",
@@ -115,8 +115,8 @@ export const naproxen = {
 		"Fluid retention",
 		"palpitations",
 		"oedema",
-		"Difficulty falling asleep",
+		"difficulty falling asleep",
 		"difficulty concentrating",
-		"Visual disturbances",
+		"visual disturbances",
 	],
 };

@@ -12,7 +12,7 @@ const Popup = ({ setShowAlert, drug }: PopupProps) => {
 	);
 
 	return (
-		<div id="popup-alert">
+		<div className="popup-alert">
 			<div className="alert-box">
 				<button className="alert-close-btn" onClick={() => setShowAlert(false)}>
 					<AiOutlineClose className="icon" />
@@ -24,9 +24,11 @@ const Popup = ({ setShowAlert, drug }: PopupProps) => {
 								{" "}
 								{int?.name}: {int.consequence}
 							</p>
+							<p className="interactions-name">
+								{" "}
+								Suggestions: {int.suggestions}
+							</p>
 						</section>
-
-						<p> Suggestions: {int.suggestions}</p>
 					</div>
 				))}
 			</div>

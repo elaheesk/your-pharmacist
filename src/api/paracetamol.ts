@@ -9,8 +9,8 @@ export const paracetamol = {
 	interactionExists: true,
 
 	name: "Alvedon",
-	dosage: "500 mg",
-	quantity: "20 tablets",
+	dosage: "500mg,",
+	quantity: "20 Tablets",
 	drugGroup: "",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/alvedon-filmdragerad-tablett-500-mg-20-st-0.jpg",

@@ -9,8 +9,11 @@
 //class:9 =Contraceptives
 
 import { acetylsalicylsyraTreo } from "./acetylsalicylsyraTreo";
+import { bisakodyl } from "./bisakodyl";
 import { bromhexidin } from "./bromhexidin";
+import { flurbiprofen } from "./flurbiprofen";
 import { ibuprofen } from "./ibuprofen";
+import { lactulose } from "./lactulose";
 
 import { loperamid } from "./loperamid";
 import { makrogol } from "./makrogol";
@@ -22,6 +25,7 @@ import { noskapinSolution } from "./noskapinSolution";
 import { omeprazol } from "./omeprazol";
 import { paracetamol } from "./paracetamol";
 import { strepsils } from "./strepsils";
+import { sumatriptan } from "./sumatriptan";
 import { xylometazolin } from "./xylometazolin";
 
 export const medicines = {
@@ -32,14 +36,18 @@ export const medicines = {
 		ibuprofen,
 		naproxen,
 		acetylsalicylsyraTreo,
+		sumatriptan,
 		omeprazol,
 		loperamid,
 		makrogol,
+		lactulose,
+		bisakodyl,
 		xylometazolin,
 		strepsils,
 		noskapin,
 		noskapinSolution,
 		bromhexidin,
+		flurbiprofen,
 		mometasone,
 	],
 };

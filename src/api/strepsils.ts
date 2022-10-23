@@ -12,8 +12,8 @@ export const strepsils = {
 	maxPeriod: "14 days",
 	interactionExists: false,
 	name: "Strepsils",
-	dosage: "1,2 mg/0,6 mg",
-	quantity: "36 lozenges",
+	dosage: "1,2mg/0,6mg,",
+	quantity: "36 Lozenges",
 	drugGroup: "Antiseptic",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/strepsils-honung-och-citron-sugtablett-36-st-1.jpg",

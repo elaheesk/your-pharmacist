@@ -8,8 +8,8 @@ export const mometasone = {
 	maxPeriod: "3 months",
 	interactionExists: false,
 	name: "Nasonex",
-	dosage: "50 ug/dose",
-	quantity: "60 doses",
+	dosage: "50ug/dose,",
+	quantity: "60 Doses",
 	drugGroup: "Glucocorticoid",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/nasonex-nasspray-50-mcg-60-doser-4.jpg",

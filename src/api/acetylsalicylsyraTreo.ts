@@ -8,7 +8,7 @@ export const acetylsalicylsyraTreo = {
 	maxPeriod: "5 days",
 	interactionExists: true,
 	name: "Treo",
-	dosage: "500 mg/50 mg",
+	dosage: "500mg/50 mg,",
 	quantity: "60 Effervescent tablets",
 	drugGroup: "Analgesics, Antipyretics and Antiphlogistics",
 	imageUrl:
@@ -53,7 +53,7 @@ export const acetylsalicylsyraTreo = {
 		{
 			name: "Waran",
 			activeSubstance: "Warfarin",
-			drugGroup: [""],
+			drugGroup: ["Anticoagulant"],
 			prescriptionDrug: true,
 			indications: ["Blood thinning medicine"],
 			interactionType: "D",
@@ -75,10 +75,10 @@ export const acetylsalicylsyraTreo = {
 	],
 	sideEffects: [
 		"Increased tendency to bleed",
-		"Dyspepsia",
-		"Heartburn",
-		"Nausea",
-		"Flatulence",
+		"dyspepsia",
+		"heartburn",
+		"nausea",
+		"flatulence",
 		" Caffeine can cause anxiety, insomnia,tremors",
 	],
 };

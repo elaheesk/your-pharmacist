@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { medicines } from "./api";
@@ -8,23 +7,10 @@ import Home from "./pages/home/Home";
 import PainFever from "./pages/PainFever";
 
 import StomachIntestines from "./pages/StomachIntestines";
-import { DrugType } from "./type";
+import "./App.css";
 
 const App = () => {
 	const [recommendedDrugs, setRecommendedDrugs] = useState<any[]>([]);
-
-	
-
-	// const handleSelectedCategory = (opt: string) => {
-	// 	setInputValue(opt);
-	// 	if (recommendedDrugs.length !== 0) {
-	// 		const filteredArrayyyyy = recommendedDrugs.filter(
-	// 			(drug: any) => drug.categories === opt
-	// 		);
-
-	// 		setFilteredDrugs(filteredArrayyyyy);
-	// 	}
-	// };
 
 	useEffect(() => {
 		const timer = setTimeout(() => setRecommendedDrugs(medicines.data), 500);

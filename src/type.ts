@@ -16,10 +16,6 @@ export interface InteractionProps {
 	suggestions: string;
 }
 
-
-
-
-
 export interface DrugType {
 	id: number;
 	otcDrug: string;

@@ -9,8 +9,8 @@ export const makrogol = {
 	interactionExists: true,
 
 	name: "Movicol",
-	dosage: "3350",
-	quantity: "50 sachets",
+	dosage: "13,125g/Sachet,",
+	quantity: "50 Sachets",
 	drugGroup: "Osmotically active agents",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/movicol-pulver-oral-losning-dospasar-50-st-1.jpg",
@@ -20,7 +20,7 @@ export const makrogol = {
 		children:
 			"Not recommended. Alternative lower strength macrogol products are available for children.",
 	},
-	maxDose: "10000  g",
+	maxDose: "105g",
 	withMeal: false,
 	betweenMeals: false,
 	infants: false,
@@ -65,6 +65,6 @@ export const makrogol = {
 		"flatulence and anal discomfort",
 		"nausea",
 		"flatulence",
-		"Headache",
+		"headache",
 	],
 };
