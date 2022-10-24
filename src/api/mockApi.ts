@@ -11,18 +11,20 @@
 import { acetylsalicylsyraTreo } from "./acetylsalicylsyraTreo";
 import { bisakodyl } from "./bisakodyl";
 import { bromhexidin } from "./bromhexidin";
+import { calciumMagnesiumCarbonate } from "./calciumMagnesiumCarbonate";
+import { dimenhydrinat } from "./dimenhydrinat";
 import { flurbiprofen } from "./flurbiprofen";
 import { ibuprofen } from "./ibuprofen";
 import { lactulose } from "./lactulose";
-
 import { loperamid } from "./loperamid";
 import { makrogol } from "./makrogol";
+import { meklozin } from "./meklozin";
 import { mometasone } from "./mometasone";
-
 import { naproxen } from "./naproxen";
 import { noskapin } from "./noskapin";
 import { noskapinSolution } from "./noskapinSolution";
 import { omeprazol } from "./omeprazol";
+import { oxymetazoline } from "./oxymetazoline";
 import { paracetamol } from "./paracetamol";
 import { strepsils } from "./strepsils";
 import { sumatriptan } from "./sumatriptan";
@@ -38,11 +40,15 @@ export const medicines = {
 		acetylsalicylsyraTreo,
 		sumatriptan,
 		omeprazol,
+		meklozin,
+		dimenhydrinat,
+		calciumMagnesiumCarbonate,
 		loperamid,
 		makrogol,
 		lactulose,
 		bisakodyl,
 		xylometazolin,
+		oxymetazoline,
 		strepsils,
 		noskapin,
 		noskapinSolution,

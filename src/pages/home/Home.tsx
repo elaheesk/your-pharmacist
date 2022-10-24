@@ -55,6 +55,9 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 				<Link className="links" to="/stomach">
 					Stomach & intestines
 				</Link>
+				<Link className="links" to="/qa">
+					Q&A
+				</Link>
 			</div>
 			<div className="filtrer-sort-container">
 				<input

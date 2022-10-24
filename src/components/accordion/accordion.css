@@ -6,7 +6,7 @@
 }
 .accordion-btn {
 	display: flex;
-	padding: 15px;
+	padding: 8px 15px;
 	width: 100%;
 	border: none;
 	outline: none;
@@ -14,27 +14,26 @@
 	font-weight: bold;
 	transition: 0.4s;
 }
-.seideEffects-container {
+.sideEffects-container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0 15px;
 }
 .sideEffect-text {
 	display: inline-block;
 	line-height: 0;
 	font-size: 14px;
-	padding: 0 15px;
+	padding: 0 2px;
 }
 .breastfeeding-text {
 	font-size: 14px;
-	padding: 0 15px;
 }
 .pregnancy-text {
 	font-size: 14px;
-	padding: 0 15px;
 }
 .omeprazol-text {
 	font-size: 14px;
-	padding: 0 15px;
 }
 @media only screen and (min-width: 992px) {
 	.accordion-btn {

@@ -9,6 +9,7 @@ const Accordion = ({ drug }: IAccordionProps) => {
 	const [toggleOne, setToggleOne] = useState<boolean>(false);
 	const [toggleTwo, setToggleTwo] = useState<boolean>(false);
 	const [toggleThree, setToggleThree] = useState<boolean>(false);
+	const [toggleFour, setToggleFour] = useState<boolean>(false);
 
 	return (
 		<div className="accordion-container">
@@ -22,7 +23,7 @@ const Accordion = ({ drug }: IAccordionProps) => {
 				<div className="sideEffects-container">
 					{drug.sideEffects.map((sideEffect, idx) => (
 						<p className="sideEffect-text" key={idx}>
-							{sideEffect},{" "}
+							{sideEffect},
 						</p>
 					))}
 				</div>
@@ -49,7 +50,7 @@ const Accordion = ({ drug }: IAccordionProps) => {
 				Should I take this with between meals?
 			</button>
 			{toggleThree ? (
-				<>
+				<div className="sideEffects-container">
 					{!drug.betweenMeals && !drug.withMeal && (
 						<p className="sideEffect-text">
 							You can take {drug.name} with or without meal
@@ -71,7 +72,20 @@ const Accordion = ({ drug }: IAccordionProps) => {
 							It is best to take {drug.name} with meal
 						</p>
 					)}
-				</>
+				</div>
+			) : (
+				<></>
+			)}
+			<button
+				onClick={() => setToggleFour(!toggleFour)}
+				className="accordion-btn">
+				{" "}
+				Mechanism of action?
+			</button>
+			{toggleFour ? (
+				<div className="sideEffects-container">
+					<p className="pregnancy-text">{drug.pharmacodynamics}</p>
+				</div>
 			) : (
 				<></>
 			)}

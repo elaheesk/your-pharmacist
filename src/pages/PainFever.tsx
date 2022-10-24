@@ -34,8 +34,8 @@ const PainFever = ({ recommendedDrugs }: IProps) => {
 	const handleChosenCategory = (option: string) => {
 		if (filteredDrugs.length !== 0) {
 			console.log("option", option);
-			const filteredArrayyyyy = filteredDrugs.filter(
-				(drug: any) => drug.categories === option
+			const filteredArrayyyyy = filteredDrugs.filter((drug: any) =>
+				drug.categories.includes(option)
 			);
 			console.log("should show only sumatri", filteredArrayyyyy);
 

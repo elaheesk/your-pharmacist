@@ -8,6 +8,7 @@ import PainFever from "./pages/PainFever";
 
 import StomachIntestines from "./pages/StomachIntestines";
 import "./App.css";
+import QuestionsAnswers from "./pages/q&a/QuestionsAnswers";
 
 const App = () => {
 	const [recommendedDrugs, setRecommendedDrugs] = useState<any[]>([]);
@@ -37,6 +38,7 @@ const App = () => {
 					path="/stomach"
 					element={<StomachIntestines recommendedDrugs={recommendedDrugs} />}
 				/>
+				<Route path="/qa" element={<QuestionsAnswers />} />
 			</Routes>
 		</div>
 	);

@@ -1,0 +1,123 @@
+export const calciumMagnesiumCarbonate = {
+	id: 19,
+	otcDrug: true,
+	categories: "Heartburn and acid reflux",
+	class: "3",
+	activeSubstance: [
+		{ name: "Calcium Carbonate" },
+		{ name: "Magnesium Carbonate" },
+	],
+	timeLimit: true,
+	maxPeriod: "14 days",
+	interactionExists: true,
+	name: "Rennie",
+	dosage: "680mg/80mg",
+	quantity: " 48 Chewable Tablets",
+	drugGroup: "Acid binding agent",
+	imageUrl:
+		"https://media.apotea.se/product-images/L/rennie-tuggtablett-680-mg-80-mg-48-tabletter-0.jpg",
+	dosing: {
+		adults:
+			"One or two tablets to be sucked or chewed as required. A maximum daily dose of 8g calcium carbonate, corresponding to 11 tablets a day, must not be exceeded. As with all antacids, if symptoms persist despite 14 days of continuous therapy, diagnostic measures are strongly recommended in order to rule out a more serious disease. ",
+		children: "Not recommended for children under 12 years.",
+	},
+	maxDose: "8g",
+	withMeal: false,
+	betweenMeals: false,
+	infants: false,
+	adults: true,
+	minAge: "12",
+	pregnancy:
+		"No increased risk of congenital defects has been observed after the use of this product during pregnancy and it can be used during pregnancy and breastfeeding",
+	breastfeeding: "It can be used during breastfeeding.",
+	indications: [
+		"For the effective relief of acid indigestion",
+		"nervous indigestion",
+		"heartburn",
+		"upset stomach",
+		" uncomfortable bloating",
+		"biliousness",
+		"flatulence",
+		"painful trapped wind",
+		" indigestion and heartburn during pregnancy",
+	],
+	contraindications: [
+		"Hypersensitivity to the active substance, substituted benzimidazoles",
+		" Hypercalcaemia and/or conditions resulting in hypercalcaemia",
+		"Nephrolithiasis due to calculi containing calcium deposits",
+		"Severe renal insufficiency",
+		" Hypophosphataemia",
+	],
+	pharmacodynamics:
+		"Rennie is aluminum-free and contains calcium and magnesium compounds with acid-binding properties. The pH in the stomach starts to rise after about 1 minute. After about 4 minutes, the pH is 5. The duration of the effect is about 1 hour ",
+	description:
+		"Rennie chewable tablets provide relief from heartburn and acid reflux, as well as acid-related pain in the pit of the stomach. Rennie binds excess hydrochloric acid in the stomach. The acid-binding effect comes within minutes. One tablet binds approx. 15.2 mmol of hydrochloric acid. The stated dose should not be exceeded. If, after 14 days of treatment, symptoms persist or only partly disappear the patient should consult a doctor ",
+	interactions: [
+		{
+			name: " Ciprofloxacin",
+			activeSubstance: "Ciprofloxacin",
+			drugGroup: ["Antibiotics"],
+			prescriptionDrug: true,
+			indications: ["Infections"],
+			interactionType: "C",
+			consequence:
+				"The absorption of the antibiotic decreases with the risk of a lack of therapeutic effect as calcium salts and magnesium salts can hinder the absorption of phosphates. ",
+			suggestions:
+				"The combination should therefore be avoided. If not possible, it is preferable to take the antacid separately from other drugs, allowing at least 2 before or after taking hour this drug.",
+		},
+		{
+			name: " Levofloxacin",
+			activeSubstance: "Levofloxacin",
+			drugGroup: ["Antibiotics"],
+			prescriptionDrug: true,
+			indications: ["Infections"],
+			interactionType: "C",
+			consequence:
+				"The absorption of the antibiotic decreases with the risk of a lack of therapeutic effect as calcium salts and magnesium salts can hinder the absorption of phosphates.",
+			suggestions:
+				"The combination should therefore be avoided. If not possible, it is preferable to take the antacid separately from other drugs, allowing at least 2 before or after taking hour this drug.",
+		},
+		{
+			name: " Sotalol",
+			activeSubstance: "Sotalol",
+			drugGroup: ["Beta blocker"],
+			prescriptionDrug: true,
+			indications: ["High blood pressure"],
+			interactionType: "C",
+			consequence: "Absorption can be reduced by approx. 30%.",
+			suggestions: "The tablets should be taken at least 2 hours apart",
+		},
+		{
+			name: " Niferex",
+			activeSubstance: "Iron",
+			drugGroup: ["Iron"],
+			prescriptionDrug: true,
+			indications: ["Anemi", "Iron deficiency"],
+			interactionType: "C",
+			consequence: "Absorption can be reduced by approx. 30%.",
+			suggestions: "The tablets should be taken at least 2 hours apart",
+		},
+		{
+			name: " Duroferon",
+			activeSubstance: "Iron",
+			drugGroup: ["Iron"],
+			prescriptionDrug: true,
+			indications: ["Anemi, Iron deficiency"],
+			interactionType: "C",
+			consequence: "Absorption can be reduced by approx. 30%.",
+			suggestions: "The tablets should be taken at least 2 hours apart",
+		},
+		{
+			name: " Alendronat",
+			activeSubstance: "Alendronic acid",
+			drugGroup: ["Bisphosphonates"],
+			prescriptionDrug: true,
+			indications: ["Oostmenopausal osteoporosis"],
+			interactionType: "C",
+			consequence:
+				"Forms chelate complexes with divalent cations in antacids, reducing absorption.",
+			suggestions: "The tablets should be taken at least 2 hours apart",
+		},
+	],
+	sideEffects: ["Stomach discomfort", "diarrhoea"],
+};

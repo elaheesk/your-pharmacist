@@ -18,7 +18,7 @@ export const xylometazolin = {
 			"Adults and children over 12 years: 1 spray shower in each nostril if necessary 2-3 times daily for a maximum of 10 days. (If used for a long time, Otrivin may cause nasal congestion or again trigger a runny nose.)",
 		children: "",
 	},
-	maxDose: "1mg/ml",
+	maxDose: "3mg/ml",
 	withMeal: false,
 	betweenMeals: false,
 	infants: false,

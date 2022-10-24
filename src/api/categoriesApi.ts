@@ -49,8 +49,9 @@ export const stomachIssues = [
 		optionValue: "Heartburn and acid reflux",
 		class: "Heartburn and acid reflux",
 	},
+	{ optionValue: "Motion sickness", class: "Motion sickness" },
 	// { optionValue: "Running worm", class: "Running worm" },
-	// { optionValue: "Motion sickness", class: "Motion sickness" },
+
 	// { optionValue: "Rectal discomfort", class: "Rectal discomfort" },
 ];
 
