@@ -1,0 +1,71 @@
+.popup-alert {
+	z-index: 9999;
+
+	background-color: "blue";
+	overflow-y: scroll;
+
+	height: 200px;
+}
+.alert-box {
+	padding: 5px;
+	height: max-content;
+	background-color: white;
+	border-radius: 15px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+.alert-name-btn-container {
+	border-top: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+.interactions-name {
+	font-size: 14px;
+}
+.alert-message {
+	width: auto;
+}
+
+.alert-close-btn {
+	border: none;
+	outline: none;
+	font-size: 16px;
+	background-color: white;
+	display: flex;
+	align-self: flex-end;
+}
+.interactions-container {
+	width: 100%;
+}
+.interactions-description {
+	font-size: 12px;
+}
+@media only screen and (min-width: 992px) {
+	.popup-alert {
+		height: 220px;
+	}
+	.alert-box {
+		padding: 10px;
+	}
+	.icon {
+		height: 30px;
+		width: 30px;
+		margin-bottom: 12px;
+	}
+	.interactions-name {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.popup-alert {
+		height: 240px;
+	}
+	.alert-box {
+		padding: 15px;
+	}
+	.interactions-name {
+		font-size: 24px;
+	}
+}

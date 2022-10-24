@@ -1,0 +1,154 @@
+.card-container {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+label {
+	font-weight: bold;
+	font-size: 18px;
+}
+.activeSubs-name {
+	font-size: 12px;
+	line-height: 2px;
+}
+.img-description-container {
+	padding-top: 10px;
+}
+
+img {
+	height: 120px;
+	width: 120px;
+}
+
+.btn-minage-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.dosag-mobileSize {
+	display: flex;
+	margin-top: 2px;
+}
+.dosag-tabletSize {
+	display: none;
+}
+.otc-drug {
+	font-style: italic;
+}
+
+.interaction-btn {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 8px 0;
+	background-color: white;
+	width: 60%;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.interaction-btn :hover {
+	color: black;
+}
+
+@media only screen and (min-width: 768px) {
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 10px;
+	}
+	label {
+		font-size: 20px;
+	}
+	.img-description-container {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	img {
+		display: flex;
+	}
+	.drug-description {
+		display: flex;
+		padding-left: 25px;
+	}
+	.dosag-mobileSize {
+		display: none;
+	}
+	.dosag-tabletSize {
+		display: flex;
+		margin-top: 0;
+	}
+
+	.otc-drug {
+		font-size: 14px;
+		margin-top: 0;
+	}
+
+	.interaction-btn {
+		width: 40%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	label {
+		font-size: 28px;
+	}
+	.activeSubs-name {
+		font-size: 16px;
+	}
+
+	img {
+		height: 130px;
+		width: 140px;
+	}
+	.drug-description {
+		font-size: 20px;
+	}
+	.dosag-tabletSize {
+		font-size: 18px;
+	}
+	.otc-drug {
+		font-size: 18px;
+	}
+
+	.interaction-btn {
+		font-size: 20px;
+		margin-bottom: 20px;
+		padding: 12px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	label {
+		font-size: 34px;
+	}
+	.activeSubs-name {
+		font-size: 24px;
+	}
+
+	img {
+		height: 150px;
+		width: 160px;
+	}
+	.drug-description {
+		font-size: 28px;
+		margin-top: 0;
+	}
+	.dosag-tabletSize {
+		font-size: 26px;
+	}
+	.otc-drug {
+		font-size: 26px;
+	}
+	.minage {
+		font-size: 26px;
+	}
+	.interaction-btn {
+		font-size: 28px;
+
+		padding: 14px;
+	}
+}
