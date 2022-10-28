@@ -3,7 +3,7 @@ export const naproxen = {
 	otcDrug: true,
 	categories: "Analgesic & Antipyretic",
 	class: "1",
-	activeSubstance: [{ name: "Naproxen" }],
+	activeSubstance: "Naproxen",
 	timeLimit: false,
 	maxPeriod: "5 days",
 	interactionExists: true,
@@ -39,7 +39,8 @@ export const naproxen = {
 	contraindications: [
 		"Hypersensitivity to the active substance or to any excipient",
 	],
-	pharmacodynamics: "",
+	pharmacodynamics:
+		"Naproxen belongs to a group of medicines called NSAIDs (non-steroidal anti-inflammatory drugs). The effect is due to naproxen reducing the formation of harmful substances (prostaglandins), which are formed during inflammation and tissue damage. Naproxen also has an effect on contractions in the uterus and lowers increased contractions in connection with menstruation. Naproxen prolongs bleeding time and inhibits platelet aggregation (blood clotting).",
 
 	description:
 		"Naproxen is a pain reliever, fever reducer and anti-inflammatory drug.It is used for mild to moderate acute pain, such as headaches, acute attacks of migraine, toothache, muscle and joint pain, backache, and for colds and menstrual cramps. Pronax can be used for short-term use up to 5 days against pain and 3 days against fever or migraine without a doctor's consultation. Full effect is achieved after about 2 hours.",

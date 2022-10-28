@@ -8,7 +8,7 @@ const QuestionsAnswers = () => {
 			<button className="go-back-btn" onClick={() => navigate("/")}>
 				<RiArrowLeftLine className="go-back-icon" /> Go back to home
 			</button>
-			<h2 className="qa-heading">Most common questions I get</h2>
+			<h2 className="qa-heading">Common questions</h2>
 			<div className="Question-container">
 				<label>What are generic drugs?</label>
 				<p className="answer">

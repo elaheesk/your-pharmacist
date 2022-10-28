@@ -29,16 +29,18 @@ import { paracetamol } from "./paracetamol";
 import { strepsils } from "./strepsils";
 import { sumatriptan } from "./sumatriptan";
 import { xylometazolin } from "./xylometazolin";
+import { zolmitriptan } from "./zolmitriptan";
 
 export const medicines = {
 	success: true,
 	error: "Please check your network connection",
 	data: [
-		paracetamol,
 		ibuprofen,
 		naproxen,
 		acetylsalicylsyraTreo,
+		paracetamol,
 		sumatriptan,
+		zolmitriptan,
 		omeprazol,
 		meklozin,
 		dimenhydrinat,

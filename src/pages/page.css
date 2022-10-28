@@ -1,6 +1,5 @@
 .page-container {
-	padding: 10px;
-	margin-top: 10px;
+	padding: 110px 10px 10px 10px;
 }
 .go-back-btn {
 	border: none;
@@ -19,7 +18,7 @@
 	color: dodgerblue;
 	border: none;
 	background-color: white;
-	font-size: 18px;
+	font-size: 14px;
 }
 .card-container {
 	margin-top: 10px;
@@ -32,16 +31,26 @@
 	.go-back-btn {
 		font-size: 16px;
 	}
+	.sidebar-options {
+		font-size: 18px;
+		padding: 5px 0;
+	}
 }
 @media only screen and (min-width: 992px) {
 	.page-container {
-		width: 80%;
-		margin-top: 45px;
+		width: 85%;
+		/* margin-top: 45px; */
 	}
 	.go-back-btn {
 		font-size: 20px;
 	}
 	.sidebar-options {
-		font-size: 24px;
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.page-container {
+		width: 80%;
+		/* margin-top: 45px; */
 	}
 }

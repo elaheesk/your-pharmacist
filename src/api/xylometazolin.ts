@@ -3,7 +3,7 @@ export const xylometazolin = {
 	otcDrug: true,
 	categories: "Nasal congestion & rhinitis",
 	class: "2",
-	activeSubstance: [{ name: "Xylometazolin " }],
+	activeSubstance: "Xylometazolin ",
 	timeLimit: true,
 	maxPeriod: "10 days",
 	interactionExists: false,

@@ -3,7 +3,7 @@ export const paracetamol = {
 	otcDrug: true,
 	categories: "Analgesic & Antipyretic",
 	class: "1",
-	activeSubstance: [{ name: "Paracetamol" }],
+	activeSubstance: "Paracetamol",
 	timeLimit: false,
 	maxPeriod: "",
 	interactionExists: true,
@@ -36,7 +36,7 @@ export const paracetamol = {
 		"Severe liver failure",
 	],
 	pharmacodynamics:
-		"Paracetamol is an anilide derivative with similar analgesic and antipyretic properties as acetylsalicylic acid. Unlike acetylsalicylic acid, it does not cause gastrointestinal irritation and is well tolerated even by patients with ulcers. Paracetamol also does not affect platelet aggregation or bleeding time. Paracetamol is generally well tolerated by patients with hypersensitivity to aspirin. Paracetamol does not inhibit the enzyme prostaglandin synthetase (which NSAIDs do). However, it is possible that the analgesic effect can be partly explained by a different effect on the synthesis of prostaglandins and leukotrienes. The antipyretic effect is due to the effect on heat-regulating centers in the CNS, whereby the heat output increases.",
+		"Paracetamol is a so called anilide derivative with analgesic and antipyretic effect and Unlike NSAID:s, it does not cause gastrointestinal irritation and is well tolerated even by patients with ulcers, and neither does it affect platelet aggregation or bleeding time. Unlike NSAID:s It does not inhibit the prostaglandin synthetase. The analgesic effect is partly explained by a different effect on the synthesis of prostaglandins and leukotrienes. The antipyretic effect is due to the effect on heat-regulating centers in the CNS, whereby the heat output increases.",
 	description:
 		"Alvedon can be used for mild pain (e.g. headache) and as a fever reducer for e.g. a cold. Not recommended for children under 3 years. The effect of pain relief with Alvedon normally lasts for 4-5 hours.Alvedon contains the active substance paracetamol. Paracetamol can be used by people with a sensitive stomach or an increased tendency to bleed.",
 

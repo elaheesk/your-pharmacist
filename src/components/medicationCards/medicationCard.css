@@ -1,38 +1,45 @@
 .card-container {
 	margin-bottom: 30px;
 	margin-top: 30px;
+	width: 100%;
 }
-label {
+.drug-name {
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
+	/* color: rgb(87, 206, 87); */
 }
 .activeSubs-name {
 	font-size: 12px;
 	line-height: 2px;
 }
-.img-description-container {
+
+.img-container {
 	padding-top: 10px;
 }
 
-img {
-	height: 120px;
-	width: 120px;
+.img-all-drugs {
+	height: 130px;
+	width: 100%;
+	transform: scale(0.8, 1.2);
+	margin: 10px 0 14px 0;
+	transform: scale(0.6, 0.9);
 }
 
 .btn-minage-container {
 	display: flex;
 	flex-direction: column;
+	text-align: left;
 	align-items: flex-end;
 }
 .dosag-mobileSize {
 	display: flex;
-	margin-top: 2px;
+	margin-top: 8px;
+	font-size: 14px;
 }
-.dosag-tabletSize {
-	display: none;
-}
+
 .otc-drug {
 	font-style: italic;
+	font-size: 14px;
 }
 
 .interaction-btn {
@@ -43,112 +50,102 @@ img {
 	border-radius: 10px;
 	padding: 8px 0;
 	background-color: white;
-	width: 60%;
+	width: 100%;
+
 	cursor: pointer;
 	margin-bottom: 10px;
+	padding: 10px;
 }
-.interaction-btn :hover {
-	color: black;
+.readMore-link {
+	font-size: 14px;
+}
+
+.alert-name-btn-container {
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 590px) {
+	.img-all-drugs {
+		transform: scale(0.4, 1.1);
+	}
 }
 
 @media only screen and (min-width: 768px) {
 	.card-container {
 		display: flex;
+		width: 30%;
 		flex-direction: column;
 		padding: 0 10px;
 	}
-	label {
-		font-size: 20px;
+	.drug-name {
+		font-size: 18px;
 	}
-	.img-description-container {
+
+	.img-all-drugs {
 		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
+		height: 150px;
+		transform: scale(0.5, 1);
 	}
-	img {
-		display: flex;
-	}
-	.drug-description {
-		display: flex;
-		padding-left: 25px;
+	.readMore-link {
+		margin-bottom: 10px;
 	}
 	.dosag-mobileSize {
-		display: none;
-	}
-	.dosag-tabletSize {
 		display: flex;
 		margin-top: 0;
 	}
 
 	.otc-drug {
 		font-size: 14px;
-		margin-top: 0;
-	}
-
-	.interaction-btn {
-		width: 40%;
+		margin-top: 10px;
 	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	label {
-		font-size: 28px;
+	.card-container {
+	}
+	.drug-name {
+		font-size: 20px;
 	}
 	.activeSubs-name {
 		font-size: 16px;
 	}
 
-	img {
+	.img-all-drugs {
 		height: 130px;
-		width: 140px;
-	}
-	.drug-description {
-		font-size: 20px;
-	}
-	.dosag-tabletSize {
-		font-size: 18px;
-	}
-	.otc-drug {
-		font-size: 18px;
+		transform: scale(0.7, 1);
 	}
 
-	.interaction-btn {
-		font-size: 20px;
-		margin-bottom: 20px;
-		padding: 12px;
+	.dosag-mobileSize {
+		font-size: 16px;
+	}
+	.otc-drug {
+		font-size: 16px;
 	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	label {
-		font-size: 34px;
+	.drug-name {
+		font-size: 22px;
 	}
 	.activeSubs-name {
-		font-size: 24px;
+		font-size: 18px;
+	}
+	.img-container {
+		display: flex;
+		width: 80%;
+	}
+	.img-all-drugs {
+		height: 150px;
+		transform: scale(0.5, 0.8);
 	}
 
-	img {
-		height: 150px;
-		width: 160px;
-	}
-	.drug-description {
-		font-size: 28px;
-		margin-top: 0;
-	}
-	.dosag-tabletSize {
-		font-size: 26px;
+	.dosag-mobileSize {
+		font-size: 20px;
 	}
 	.otc-drug {
-		font-size: 26px;
-	}
-	.minage {
-		font-size: 26px;
-	}
-	.interaction-btn {
-		font-size: 28px;
-
-		padding: 14px;
+		font-size: 20px;
 	}
 }

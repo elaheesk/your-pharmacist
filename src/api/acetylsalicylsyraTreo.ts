@@ -3,7 +3,7 @@ export const acetylsalicylsyraTreo = {
 	otcDrug: true,
 	categories: "Analgesic & Antipyretic & Antiphlogistic",
 	class: "1",
-	activeSubstance: [{ name: "Acetylsalicylsyra" }, { name: "Caffeine" }],
+	activeSubstance: "Acetylsalicylsyra, Caffeine",
 	timeLimit: true,
 	maxPeriod: "5 days",
 	interactionExists: true,

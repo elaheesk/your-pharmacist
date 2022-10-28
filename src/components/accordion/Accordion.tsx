@@ -11,10 +11,22 @@ const Accordion = ({ drug }: IAccordionProps) => {
 	const [toggleThree, setToggleThree] = useState<boolean>(false);
 	const [toggleFour, setToggleFour] = useState<boolean>(false);
 
+	const [toggleOneColor, setToggleOneColor] =
+		useState<string>("rgb(151, 225, 151)");
+	const [toggleTwoColor, setToggleTwoColor] =
+		useState<string>("rgb(151, 225, 151)");
+	const [toggleThreeColor, setToggleThreeColor] =
+		useState<string>("rgb(151, 225, 151)");
+	const [toggleFourColor, setToggleFourColor] =
+		useState<string>("rgb(151, 225, 151)");
+
 	return (
 		<div className="accordion-container">
 			{" "}
 			<button
+				style={{
+					backgroundColor: toggleOne ? "rgb(87, 206, 87)" : toggleOneColor,
+				}}
 				onClick={() => setToggleOne(!toggleOne)}
 				className="accordion-btn">
 				Possible side effects?
@@ -31,20 +43,35 @@ const Accordion = ({ drug }: IAccordionProps) => {
 				<></>
 			)}
 			<button
+				style={{
+					backgroundColor: toggleTwo ? "rgb(87, 206, 87)" : toggleTwoColor,
+				}}
 				onClick={() => setToggleTwo(!toggleTwo)}
 				className="accordion-btn">
 				{" "}
-				Is it ok during pregnancy or breastfeeding ?
+				During pregnancy and breastfeeding ?
 			</button>
 			{toggleTwo ? (
 				<div className="sideEffects-container">
-					<p className="pregnancy-text">{drug.pregnancy}</p>
-					<p className="breastfeeding-text">{drug.breastfeeding}</p>
+					<div>
+						<span className="pregnancy-text" style={{ fontWeight: "bold " }}>
+							Pregnancy:{" "}
+						</span>
+						<span className="pregnancy-text">{drug.pregnancy}</span>
+						<div className="divider"></div>
+						<span className="pregnancy-text" style={{ fontWeight: "bold " }}>
+							Breastfeeding:{" "}
+						</span>
+						<span className="pregnancy-text">{drug.breastfeeding}</span>
+					</div>
 				</div>
 			) : (
 				<></>
 			)}
 			<button
+				style={{
+					backgroundColor: toggleThree ? "rgb(87, 206, 87)" : toggleThreeColor,
+				}}
 				onClick={() => setToggleThree(!toggleThree)}
 				className="accordion-btn">
 				Should I take this with between meals?
@@ -77,6 +104,9 @@ const Accordion = ({ drug }: IAccordionProps) => {
 				<></>
 			)}
 			<button
+				style={{
+					backgroundColor: toggleFour ? "rgb(87, 206, 87)" : toggleFourColor,
+				}}
 				onClick={() => setToggleFour(!toggleFour)}
 				className="accordion-btn">
 				{" "}

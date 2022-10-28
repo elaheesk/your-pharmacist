@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import "./home.css";
-
 import { MedicationCard } from "../../components/medicationCards";
-import { DrugType, NameProps } from "../../type";
-import { Link } from "react-router-dom";
+import { DrugType } from "../../type";
+import "./home.css";
 
 interface PageProps {
 	recommendedDrugs: any;
@@ -12,12 +10,18 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 	const [inputValue, setInputValue] = useState<string>("");
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
 	const [showDropdown, setShowDropdown] = useState<boolean>(false);
+	const [ascSortColor, setAscSortColor] = useState("rgb(182, 235, 182)");
+	const [dscSortColor, setDscSortColor] = useState("rgb(182, 235, 182)");
 	useEffect(() => {
 		if (inputValue) {
-			const filteredResponse = recommendedDrugs.filter((searched: DrugType) =>
-				searched?.name
-					?.toLocaleLowerCase()
-					.startsWith(inputValue.toLocaleLowerCase())
+			const filteredResponse = recommendedDrugs.filter(
+				(searched: DrugType) =>
+					searched?.name
+						?.toLocaleLowerCase()
+						.startsWith(inputValue.toLocaleLowerCase()) ||
+					searched?.activeSubstance
+						?.toLocaleLowerCase()
+						.includes(inputValue.toLocaleLowerCase())
 			);
 
 			setFilteredDrugs(filteredResponse);
@@ -31,6 +35,8 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? 1 : -1));
 		console.log("asc", sortedArr);
 		setFilteredDrugs(sortedArr);
+		setAscSortColor("rgb(87, 206, 87)");
+		setDscSortColor("rgb(182, 235, 182)");
 	};
 
 	// 👇️ sort by String property DESCENDING (Z - A)
@@ -39,30 +45,16 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? -1 : 1));
 		console.log("dsc", sortedArr);
 		setFilteredDrugs(sortedArr);
+		setDscSortColor("rgb(87, 206, 87)");
+		setAscSortColor("rgb(182, 235, 182)");
 	};
 
 	return (
 		<div className="main-container">
-			<h3 className="main-title">Elahes recommendations</h3>
-			<div className="link-container">
-				<Link className="links" to="/painfever">
-					Pain & fever{" "}
-				</Link>
-
-				<Link className="links" to="/coldflu">
-					cold & flu
-				</Link>
-				<Link className="links" to="/stomach">
-					Stomach & intestines
-				</Link>
-				<Link className="links" to="/qa">
-					Q&A
-				</Link>
-			</div>
 			<div className="filtrer-sort-container">
 				<input
 					value={inputValue}
-					placeholder="Name of the medicine"
+					placeholder="Search medicine"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 						setInputValue(e.target.value)
 					}
@@ -77,11 +69,17 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 					<div className="sort-dropdown">
 						{showDropdown ? (
 							<>
-								<button className="sort-btn" onClick={strAscending}>
+								<button
+									style={{ backgroundColor: ascSortColor }}
+									className="sort-btn"
+									onClick={strAscending}>
 									A to Z
 								</button>
 
-								<button className="sort-btn" onClick={strDescending}>
+								<button
+									style={{ backgroundColor: dscSortColor }}
+									className="sort-btn"
+									onClick={strDescending}>
 									Z to A
 								</button>
 							</>
@@ -109,11 +107,12 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 					what the patient should pay attention to.
 				</p>
 			</div>
-
-			{filteredDrugs.length !== 0 &&
-				filteredDrugs.map((drug: DrugType) => (
-					<MedicationCard drug={drug} key={drug.id} />
-				))}
+			<div className="test">
+				{filteredDrugs.length !== 0 &&
+					filteredDrugs.map((drug: DrugType) => (
+						<MedicationCard drug={drug} key={drug.id} />
+					))}
+			</div>
 		</div>
 	);
 };

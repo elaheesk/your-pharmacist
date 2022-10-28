@@ -6,8 +6,8 @@ import Home from "./pages/home/Home";
 import Popup from "./components/popup/Popup";
 import { medicines } from "./api";
 import { DrugType } from "./type";
-import ColdFlu from "./pages/ColdFlu";
-import PainFever from "./pages/PainFever";
+import ColdFlu from "./pages/ColdFluDrugs";
+import PainFever from "./pages/PainFeverDrugs";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -24,7 +24,7 @@ const drug = {
 	name: "",
 	dosage: "",
 	quantity: "",
-	activeSubstance: [],
+	activeSubstance: "",
 	timeLimit: false,
 	maxPeriod: "",
 	drugGroup: "",

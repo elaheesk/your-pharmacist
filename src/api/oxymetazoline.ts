@@ -3,7 +3,7 @@ export const oxymetazoline = {
 	otcDrug: true,
 	categories: "Nasal congestion & rhinitis",
 	class: "2",
-	activeSubstance: [{ name: "Oxymetazoline" }],
+	activeSubstance: "Oxymetazoline",
 	timeLimit: true,
 	maxPeriod: "10 days",
 	interactionExists: false,

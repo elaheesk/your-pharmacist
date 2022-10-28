@@ -1,17 +1,17 @@
-export const loperamid = {
-	id: 6,
-	otcDrug: true,
-	categories: "Diarrhea",
-	class: "3",
-	activeSubstance: "Loperamid",
+export const fenoximetylpenicillin = {
+	id: 23,
+	otcDrug: false,
+	categories: "Antibiotics",
+	class: "",
+	activeSubstance: "fenoximetylpenicillin",
 
-	timeLimit: false,
-	maxPeriod: "",
+	timeLimit: true,
+	maxPeriod: "10 days",
 	interactionExists: true,
-	name: "Dimor",
-	dosage: "2mg,",
-	quantity: "16 Tablets",
-	drugGroup: "Propulsionsdämpande medel",
+	name: "Kåvepenin",
+	dosage: "1g,",
+	quantity: "30 Tablets",
+	drugGroup: "Beta-lactamase sensitive penicillins",
 	imageUrl:
 		"https://media.apotea.se/product-images/L/dimor-filmdragerad-tablett-2-mg-16-st-1.jpg",
 	dosing: {
@@ -19,9 +19,9 @@ export const loperamid = {
 			"Treatment begins with 4 mg. Then 2 mg after each bowel movement with diarrhoea. However, wait 2-3 hours between the first and second dose. The daily dose should not exceed 16 mg (8 tablets).",
 		children: "",
 	},
-	maxDose: "16 mg",
+	maxDose: "6g",
 	withMeal: false,
-	betweenMeals: false,
+	betweenMeals: true,
 	infants: false,
 	adults: true,
 	minAge: "12",
@@ -30,8 +30,14 @@ export const loperamid = {
 	breastfeeding:
 		"Loperamide can pass into breast milk in small amounts. Therefore, Dimor is not recommended during breastfeeding.",
 	indications: [
-		"Symptomatic treatment of acute non-specific diarrheas and chronic diarrheal conditions",
-		"Too fast bowel passage, with or without faecal incontinence and in connection with ileostomies, colostomies and dumping.",
+		"Strep throat",
+		"acute sinusitis",
+		"ear infection",
+		"community-acquired pneumonia",
+		"uncomplicated skin and soft tissue infections",
+		"cutaneous Lyme infection",
+		"dental abscess",
+		"",
 	],
 	contraindications: [
 		"Hypersensitivity to loperamide hydrochloride or to any excipient",

@@ -3,7 +3,7 @@ export const dimenhydrinat = {
 	otcDrug: true,
 	categories: "Motion sickness",
 	class: "3",
-	activeSubstance: [{ name: "Dimenhydrinat" }],
+	activeSubstance: "Dimenhydrinat",
 	timeLimit: false,
 	maxPeriod: "",
 	interactionExists: true,

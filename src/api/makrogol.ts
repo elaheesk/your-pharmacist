@@ -3,7 +3,7 @@ export const makrogol = {
 	otcDrug: true,
 	categories: "Constipation",
 	class: "3",
-	activeSubstance: [{ name: "Makrogol" }],
+	activeSubstance: "Makrogol",
 	timeLimit: false,
 	maxPeriod: "14 days",
 	interactionExists: true,

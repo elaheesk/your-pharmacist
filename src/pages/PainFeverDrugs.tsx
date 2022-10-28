@@ -1,14 +1,18 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { coldAndFlu } from "../api/categoriesApi";
 import { MedicationCard } from "../components/medicationCards";
-import { DrugType } from "../type";
 import { RiArrowLeftLine } from "react-icons/ri";
-import { IProps } from "./PainFever";
-import "./page.css";
+import Popup from "../components/popup/Popup";
+import { painAndFever } from "../api/categoriesApi";
+import { DrugType } from "../type";
 
-const ColdFlu = ({ recommendedDrugs }: IProps) => {
-	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
+export interface IProps {
+	recommendedDrugs: any;
+}
+
+const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
+	const [filteredDrugs, setFilteredDrugs] = useState<any[]>([]);
 	const [chosenCategories, setChosenCategories] = useState<DrugType[]>([]);
 	const navigate = useNavigate();
 
@@ -16,8 +20,10 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 		const handleSelectedClass = () => {
 			if (recommendedDrugs.length !== 0) {
 				const filteredArrayyyyy = recommendedDrugs.filter(
-					(drug: any) => drug.class === "2"
+					(drug: any) => drug.class === "1"
 				);
+				console.log("filteredArrayyyyy", filteredArrayyyyy);
+
 				setFilteredDrugs(filteredArrayyyyy);
 				setChosenCategories(filteredArrayyyyy);
 			}
@@ -27,14 +33,15 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 
 	const handleChosenCategory = (option: string) => {
 		if (filteredDrugs.length !== 0) {
-			const filteredArrayyyyy = filteredDrugs.filter(
-				(drug: any) => drug.categories === option
+			console.log("option", option);
+			const filteredArrayyyyy = filteredDrugs.filter((drug: any) =>
+				drug.categories.includes(option)
 			);
+			console.log("should show only sumatri", filteredArrayyyyy);
 
 			setChosenCategories(filteredArrayyyyy);
 		}
 	};
-
 	return (
 		<div className="page-container">
 			<button className="go-back-btn" onClick={() => navigate("/")}>
@@ -42,7 +49,7 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 			</button>
 			<div className="sidebar-card-container">
 				<div className="sidebar-parent">
-					{coldAndFlu.map((eachCateg, idx) => (
+					{painAndFever.map((eachCateg, idx) => (
 						<button
 							className="sidebar-options"
 							key={idx}
@@ -51,13 +58,13 @@ const ColdFlu = ({ recommendedDrugs }: IProps) => {
 						</button>
 					))}{" "}
 				</div>
-				<div className="card-container">
-					{chosenCategories.map((drug, idx) => (
-						<MedicationCard drug={drug} key={idx} />
-					))}
-				</div>
+			</div>
+			<div className="test">
+				{chosenCategories.map((drug, idx) => (
+					<MedicationCard drug={drug} key={idx} />
+				))}
 			</div>
 		</div>
 	);
 };
-export default ColdFlu;
+export default ColdFluDrugs;

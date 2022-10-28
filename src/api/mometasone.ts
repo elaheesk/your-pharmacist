@@ -3,7 +3,7 @@ export const mometasone = {
 	otcDrug: true,
 	categories: "Sinusitis",
 	class: "2",
-	activeSubstance: [{ name: "Mometasone" }],
+	activeSubstance: "Mometasone",
 	timeLimit: true,
 	maxPeriod: "3 months",
 	interactionExists: false,

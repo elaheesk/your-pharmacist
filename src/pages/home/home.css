@@ -1,18 +1,5 @@
 .main-container {
-	padding: 15px;
-}
-.main-title {
-	font-weight: 500;
-	font-size: 20px;
-	font-style: initial;
-}
-
-.links {
-	display: flex;
-	font-size: 20px;
-	font-weight: bolder;
-	color: dodgerblue;
-	text-decoration: none;
+	padding: 110px 15px 15px 15px;
 }
 
 .filtrer-sort-container {
@@ -45,28 +32,31 @@ input {
 .sort-btn {
 	border: none;
 	outline: none;
-	margin-bottom: 3px;
+	margin: 1px 0;
 	padding: 7px;
 	font-size: 18px;
+	font-weight: bold;
 	letter-spacing: 1px;
+	background-color: rgb(182, 235, 182);
+	color: white;
 }
 
+.test {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
 @media only screen and (min-width: 768) {
-	.main-title {
-		font-size: 26px;
-	}
 }
 
 @media only screen and (min-width: 992px) {
 	.main-container {
-		width: 80%;
+		width: 85%;
 	}
-	.main-title {
-		font-size: 48px;
-	}
-	.links {
-		font-size: 32px;
-	}
+
 	.filtrer-sort-container {
 		margin-top: 20px;
 	}
@@ -92,13 +82,7 @@ input {
 }
 @media only screen and (min-width: 1200px) {
 	.main-container {
-		width: 70%;
-	}
-	.main-title {
-		font-size: 52px;
-	}
-	.links {
-		font-size: 38px;
+		width: 80%;
 	}
 
 	.filtrer-sort-container {
@@ -106,15 +90,15 @@ input {
 	}
 
 	input {
-		padding: 22px;
-		font-size: 26px;
+		padding: 20px;
+		font-size: 22px;
 	}
 
 	.sort-btn {
-		font-size: 28px;
+		font-size: 22px;
 	}
 	.prewords {
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 40px;
 	}
 }

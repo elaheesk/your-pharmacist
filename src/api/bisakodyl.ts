@@ -3,7 +3,7 @@ export const bisakodyl = {
 	otcDrug: true,
 	categories: "Constipation",
 	class: "3",
-	activeSubstance: [{ name: "Bisakodyl" }],
+	activeSubstance: "Bisakodyl",
 	timeLimit: true,
 	maxPeriod: "1 week",
 	interactionExists: false,

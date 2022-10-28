@@ -3,7 +3,7 @@ export const sumatriptan = {
 	otcDrug: true,
 	categories: "Migraine",
 	class: "1",
-	activeSubstance: [{ name: "Sumatriptan" }],
+	activeSubstance: "Sumatriptan",
 	timeLimit: true,
 	maxPeriod:
 		"Do not take this medicine or should seek the advice of their pharmacist or doctor first. ",
@@ -47,7 +47,7 @@ export const sumatriptan = {
 	pharmacodynamics:
 		"Sumatriptan belongs to a group of medicines called 5HT1 agonists (‘triptans’), which act to reduce the swelling of blood vessels in the head.      ",
 	description:
-		"This medicine contains Sumatriptan which belongs to a group of medicines called 5HT1 agonists (‘triptans’), which act to reduce the swelling of blood vessels in the head.It can be used to relieve migraine attacks that happen with or without warning signs (‘aura’), such as sensitivity to light, feeling sick and being sick, in people who have previously been diagnosed with migraine.This medicine does not prevent a migraine attack, and should therefore only be taken once the migraine has started.It can be taken by adults between the ages of 18 and 65 years. However some people should not take this medicine or should seek the advice of their pharmacist or doctor first.",
+		"Sumatriptan belongs to a group of medicines called 5HT1 agonists (‘triptans’), which act to reduce the swelling of blood vessels in the head.It is used to relieve migraine attacks that happen with or without warning signs (‘aura’), such as sensitivity to light/feeling sick, in people who have previously been diagnosed with migraine.Sumatriptan does not prevent a migraine attack, and should therefore only be taken once the migraine has started.It is for adults between  18-65 years of age. However some people should avpid sumatriptan or seek advice of their pharmacist or doctor first.",
 	interactions: [
 		{
 			name: "Aurorix",

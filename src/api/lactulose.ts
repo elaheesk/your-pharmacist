@@ -3,7 +3,7 @@ export const lactulose = {
 	otcDrug: true,
 	categories: "Constipation",
 	class: "3",
-	activeSubstance: [{ name: "Lactulose" }],
+	activeSubstance: "Lactulose",
 	timeLimit: true,
 	maxPeriod: "",
 	interactionExists: false,
@@ -11,7 +11,8 @@ export const lactulose = {
 	dosage: "670mg/ml,",
 	quantity: "500ml",
 	drugGroup: "Bowel regulating agent",
-	imageUrl: "https://media.apotea.se/product-images/L/6604-1.jpg",
+	imageUrl:
+		"https://media.meds.se/meds/images/7046261073004_1/550/550/fill/c/laktulos-meda-670-mg-ml-1000-milliliter-oral-losning.jpg",
 	dosing: {
 		adults:
 			"Initially, 30 ml per day is given as a single dose. Once bowel function has started (usually after 2-4 days), you can switch to maintenance doses of the order of 10-25 ml daily.",

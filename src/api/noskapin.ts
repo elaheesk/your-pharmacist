@@ -3,7 +3,7 @@ export const noskapin = {
 	otcDrug: true,
 	categories: "Cough",
 	class: "2",
-	activeSubstance: [{ name: "Noskapin " }],
+	activeSubstance: "Noskapin ",
 	timeLimit: true,
 	maxPeriod: "14 days",
 	interactionExists: true,

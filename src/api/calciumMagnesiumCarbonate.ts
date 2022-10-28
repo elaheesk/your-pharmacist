@@ -3,10 +3,7 @@ export const calciumMagnesiumCarbonate = {
 	otcDrug: true,
 	categories: "Heartburn and acid reflux",
 	class: "3",
-	activeSubstance: [
-		{ name: "Calcium Carbonate" },
-		{ name: "Magnesium Carbonate" },
-	],
+	activeSubstance: "Calcium Carbonate, Magnesium Carbonate",
 	timeLimit: true,
 	maxPeriod: "14 days",
 	interactionExists: true,

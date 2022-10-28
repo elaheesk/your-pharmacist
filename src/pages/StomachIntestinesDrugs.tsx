@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { stomachIssues } from "../api/categoriesApi";
 import { MedicationCard } from "../components/medicationCards";
 import { DrugType } from "../type";
-import { IProps } from "./PainFever";
+import { IProps } from "./PainFeverDrugs";
 import { RiArrowLeftLine } from "react-icons/ri";
 import "./page.css";
 
-const StomachIntestines = ({ recommendedDrugs }: IProps) => {
+const StomachIntestinesDrugs = ({ recommendedDrugs }: IProps) => {
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
 	const [chosenCategories, setChosenCategories] = useState<DrugType[]>([]);
 	const navigate = useNavigate();
@@ -51,7 +51,7 @@ const StomachIntestines = ({ recommendedDrugs }: IProps) => {
 					))}{" "}
 				</div>
 			</div>
-			<div className="card-container">
+			<div className="test">
 				{chosenCategories.map((drug, idx) => (
 					<MedicationCard drug={drug} key={idx} />
 				))}
@@ -59,4 +59,4 @@ const StomachIntestines = ({ recommendedDrugs }: IProps) => {
 		</div>
 	);
 };
-export default StomachIntestines;
+export default StomachIntestinesDrugs;

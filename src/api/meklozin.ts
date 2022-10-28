@@ -3,7 +3,7 @@ export const meklozin = {
 	otcDrug: true,
 	categories: "Motion sickness",
 	class: "3",
-	activeSubstance: [{ name: "Meklozin" }],
+	activeSubstance: "Meklozin",
 	timeLimit: true,
 	maxPeriod: "",
 	interactionExists: true,

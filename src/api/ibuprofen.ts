@@ -3,7 +3,7 @@ export const ibuprofen = {
 	otcDrug: true,
 	categories: "Analgesic & Antipyretic",
 	class: "1",
-	activeSubstance: [{ name: "Ibuprofen" }],
+	activeSubstance: "Ibuprofen",
 
 	timeLimit: true,
 	maxPeriod: "10 days",

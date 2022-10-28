@@ -3,7 +3,7 @@ export const omeprazol = {
 	otcDrug: true,
 	categories: "Heartburn and acid reflux",
 	class: "3",
-	activeSubstance: [{ name: "Omeprazol" }],
+	activeSubstance: "Omeprazol",
 	timeLimit: true,
 	maxPeriod: "14 days",
 	interactionExists: true,

@@ -1,6 +1,6 @@
-export interface NameProps {
-	name: string;
-}
+// export interface NameProps {
+// 	name: string;
+// }
 export interface DosingProps {
 	adults: string;
 	children: string;
@@ -21,7 +21,7 @@ export interface DrugType {
 	otcDrug: string;
 	categories: string;
 	class: string;
-	activeSubstance: NameProps[];
+	activeSubstance: string;
 	name: string;
 	timeLimit: boolean;
 	maxPeriod: string;

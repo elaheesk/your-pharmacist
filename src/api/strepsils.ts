@@ -3,10 +3,7 @@ export const strepsils = {
 	otcDrug: true,
 	categories: "Sore throat",
 	class: "2",
-	activeSubstance: [
-		{ name: "2,4-diklorobensylalkohol" },
-		{ name: "Amylmetakresol" },
-	],
+	activeSubstance: "2,4-diklorobensylalkohol , Amylmetakresol",
 
 	timeLimit: false,
 	maxPeriod: "14 days",

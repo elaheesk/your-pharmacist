@@ -3,7 +3,7 @@ export const flurbiprofen = {
 	otcDrug: true,
 	categories: "Sore throat",
 	class: "2",
-	activeSubstance: [{ name: "Flurbiprofen" }],
+	activeSubstance: "Flurbiprofen",
 	timeLimit: true,
 	maxPeriod: "3 days",
 	interactionExists: true,
