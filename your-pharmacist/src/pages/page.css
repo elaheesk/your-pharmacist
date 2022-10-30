@@ -1,0 +1,56 @@
+.page-container {
+	padding: 110px 10px 10px 10px;
+}
+.go-back-btn {
+	border: none;
+	outline: none;
+	background-color: white;
+	font-size: 14px;
+}
+
+.sidebar-parent {
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0 20px 0;
+}
+.sidebar-options {
+	display: flex;
+	color: dodgerblue;
+	border: none;
+	background-color: white;
+	font-size: 14px;
+}
+.card-container {
+	margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+	.sidebar-card-container {
+		padding: 0 10px;
+	}
+	.go-back-btn {
+		font-size: 16px;
+	}
+	.sidebar-options {
+		font-size: 18px;
+		padding: 5px 0;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.page-container {
+		width: 85%;
+		/* margin-top: 45px; */
+	}
+	.go-back-btn {
+		font-size: 20px;
+	}
+	.sidebar-options {
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.page-container {
+		width: 80%;
+		/* margin-top: 45px; */
+	}
+}

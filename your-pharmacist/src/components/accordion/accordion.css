@@ -1,0 +1,73 @@
+.accordion-container {
+	width: 100%;
+	border-radius: 10px;
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+}
+.accordion-btn {
+	display: flex;
+	padding: 10px 15px;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	/* background-color: rgb(151, 225, 151); */
+	color: white;
+	justify-content: flex-start;
+	font-weight: 600;
+	transition: 0.4s;
+}
+.sideEffects-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+.sideEffect-text {
+	display: inline-block;
+	line-height: 0;
+	font-size: 14px;
+	padding: 0 2px;
+}
+
+.pregnancy-text {
+	font-size: 14px;
+}
+.divider {
+	margin-bottom: 7px;
+}
+.omeprazol-text {
+	font-size: 14px;
+}
+@media only screen and (min-width: 992px) {
+	.accordion-btn {
+		font-size: 18px;
+	}
+	.sideEffect-text {
+		font-size: 14px;
+	}
+	.pregnancy-text {
+		font-size: 14px;
+	}
+
+	.omeprazol-text {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.accordion-btn {
+		font-size: 22px;
+	}
+	.sideEffect-text {
+		font-size: 18px;
+	}
+	.pregnancy-text {
+		font-size: 18px;
+	}
+
+	.omeprazol-text {
+		font-size: 18px;
+	}
+}
