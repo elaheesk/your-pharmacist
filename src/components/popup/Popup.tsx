@@ -6,11 +6,6 @@ interface PopupProps {
 	drug: DrugType;
 }
 const Popup = ({ setShowAlert, drug }: PopupProps) => {
-	console.log(
-		"names",
-		drug.interactions.map((on) => on)
-	);
-
 	return (
 		<div className="popup-alert">
 			<div className="alert-box">

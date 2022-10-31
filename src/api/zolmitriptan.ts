@@ -8,7 +8,7 @@ export const zolmitriptan = {
 	maxPeriod:
 		"Do not take this medicine or should seek the advice of their pharmacist or doctor first. ",
 	interactionExists: true,
-	name: "Zolmitriptan",
+	name: "Zomig Nasal",
 	dosage: "2,5mg/dose,",
 	quantity: "2 ml",
 	drugGroup: "‘Triptans",

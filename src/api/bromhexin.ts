@@ -1,9 +1,9 @@
-export const bromhexidin = {
+export const bromhexin = {
 	id: 11,
 	otcDrug: true,
 	categories: "Cough",
 	class: "2",
-	activeSubstance: "Bromhexidin ",
+	activeSubstance: "Bromhexin ",
 	timeLimit: true,
 	maxPeriod: "14 days",
 	interactionExists: true,
@@ -46,7 +46,8 @@ export const bromhexidin = {
 			prescriptionDrug: false,
 			indications: [""],
 			interactionType: "",
-			consequence: "T",
+			consequence: "",
+			suggestions: "",
 		},
 	],
 	sideEffects: [""],

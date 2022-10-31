@@ -4,10 +4,11 @@ import { coldAndFlu } from "../api/categoriesApi";
 import { MedicationCard } from "../components/medicationCards";
 import { DrugType } from "../type";
 import { RiArrowLeftLine } from "react-icons/ri";
-import { IProps } from "./PainFeverDrugs";
 import "./page.css";
-
-const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
+interface IColdFlu {
+	recommendedDrugs: DrugType[];
+}
+const ColdFluDrugs = ({ recommendedDrugs }: IColdFlu): JSX.Element => {
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
 	const [chosenCategories, setChosenCategories] = useState<DrugType[]>([]);
 	const navigate = useNavigate();
@@ -51,11 +52,11 @@ const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
 						</button>
 					))}{" "}
 				</div>
-				<div className="card-container">
-					{chosenCategories.map((drug, idx) => (
-						<MedicationCard drug={drug} key={idx} />
-					))}
-				</div>
+			</div>
+			<div className="test">
+				{chosenCategories.map((drug, idx) => (
+					<MedicationCard drug={drug} key={idx} />
+				))}
 			</div>
 		</div>
 	);

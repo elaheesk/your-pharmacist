@@ -10,9 +10,11 @@
 
 import { acetylsalicylsyraTreo } from "./acetylsalicylsyraTreo";
 import { bisakodyl } from "./bisakodyl";
-import { bromhexidin } from "./bromhexidin";
+import { bromhexin } from "./bromhexin";
+import { bromhexinEfedrin } from "./bromhexinEfedrin";
 import { calciumMagnesiumCarbonate } from "./calciumMagnesiumCarbonate";
 import { dimenhydrinat } from "./dimenhydrinat";
+import { etylmorfin } from "./etylmorfin";
 import { flurbiprofen } from "./flurbiprofen";
 import { ibuprofen } from "./ibuprofen";
 import { lactulose } from "./lactulose";
@@ -25,7 +27,9 @@ import { noskapin } from "./noskapin";
 import { noskapinSolution } from "./noskapinSolution";
 import { omeprazol } from "./omeprazol";
 import { oxymetazoline } from "./oxymetazoline";
+import { pantoprazol } from "./pantoprazol";
 import { paracetamol } from "./paracetamol";
+import { paracetamolKodein } from "./paracetamolKodein";
 import { strepsils } from "./strepsils";
 import { sumatriptan } from "./sumatriptan";
 import { xylometazolin } from "./xylometazolin";
@@ -39,9 +43,11 @@ export const medicines = {
 		naproxen,
 		acetylsalicylsyraTreo,
 		paracetamol,
+		paracetamolKodein,
 		sumatriptan,
 		zolmitriptan,
 		omeprazol,
+		pantoprazol,
 		meklozin,
 		dimenhydrinat,
 		calciumMagnesiumCarbonate,
@@ -54,7 +60,9 @@ export const medicines = {
 		strepsils,
 		noskapin,
 		noskapinSolution,
-		bromhexidin,
+		bromhexin,
+		etylmorfin,
+		bromhexinEfedrin,
 		flurbiprofen,
 		mometasone,
 	],

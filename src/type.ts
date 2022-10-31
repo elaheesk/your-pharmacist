@@ -18,7 +18,7 @@ export interface InteractionProps {
 
 export interface DrugType {
 	id: number;
-	otcDrug: string;
+	otcDrug: boolean;
 	categories: string;
 	class: string;
 	activeSubstance: string;

@@ -1,18 +1,16 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MedicationCard } from "../components/medicationCards";
 import { RiArrowLeftLine } from "react-icons/ri";
-import Popup from "../components/popup/Popup";
 import { painAndFever } from "../api/categoriesApi";
 import { DrugType } from "../type";
-
+import "./page.css";
 export interface IProps {
-	recommendedDrugs: any;
+	recommendedDrugs: DrugType[];
 }
 
-const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
-	const [filteredDrugs, setFilteredDrugs] = useState<any[]>([]);
+const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
+	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
 	const [chosenCategories, setChosenCategories] = useState<DrugType[]>([]);
 	const navigate = useNavigate();
 
@@ -22,7 +20,7 @@ const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
 				const filteredArrayyyyy = recommendedDrugs.filter(
 					(drug: any) => drug.class === "1"
 				);
-				console.log("filteredArrayyyyy", filteredArrayyyyy);
+				console.log("filteredArray pain", filteredArrayyyyy);
 
 				setFilteredDrugs(filteredArrayyyyy);
 				setChosenCategories(filteredArrayyyyy);
@@ -67,4 +65,4 @@ const ColdFluDrugs = ({ recommendedDrugs }: IProps) => {
 		</div>
 	);
 };
-export default ColdFluDrugs;
+export default PainFeverDrugs;

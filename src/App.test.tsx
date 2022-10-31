@@ -6,7 +6,7 @@ import Home from "./pages/home/Home";
 import Popup from "./components/popup/Popup";
 import { medicines } from "./api";
 import { DrugType } from "./type";
-import ColdFlu from "./pages/ColdFluDrugs";
+// import ColdFlu from "./pages/ColdFluDrugs";
 import PainFever from "./pages/PainFeverDrugs";
 
 const mockedUsedNavigate = jest.fn();
@@ -18,7 +18,7 @@ jest.mock("react-router-dom", () => ({
 
 const drug = {
 	id: 0,
-	otcDrug: "",
+	otcDrug: false,
 	categories: "",
 	class: "",
 	name: "",

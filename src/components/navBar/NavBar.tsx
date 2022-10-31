@@ -28,15 +28,18 @@ const NavBar = ({ isOpen, setIsOpen }: IProps) => {
 
 			{isOpen ? (
 				<div className="link-container">
+					<Link className="links" to="/coldflu">
+						cold & flu
+					</Link>
 					<Link className="links" to="/painfever">
 						Pain & fever{" "}
 					</Link>
 
-					<Link className="links" to="/coldflu">
-						cold & flu
-					</Link>
 					<Link className="links" to="/stomach">
 						Stomach & intestines
+					</Link>
+					<Link className="links" to="/prescriptiondrugs">
+						Prescription drugs
 					</Link>
 					<Link className="links" to="/qa">
 						Q&A

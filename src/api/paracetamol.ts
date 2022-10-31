@@ -15,7 +15,7 @@ export const paracetamol = {
 	imageUrl:
 		"https://media.apotea.se/product-images/L/alvedon-filmdragerad-tablett-500-mg-20-st-0.jpg",
 	dosing: {
-		adults: "1-2 tabletter var 4–6 timme, högst 4 gånger per dygn.",
+		adults: "1-2 tablets every 4-6 hours, maximum 4 times per day.",
 		children: "",
 	},
 	maxDose: "4 g (4000 mg)",

@@ -13,7 +13,7 @@ export const MedicationCard = ({ drug }: CardProps) => {
 		<div className="card-container" key={drug?.id}>
 			<label className="drug-name">{drug.name}</label>
 
-			<p className="activeSubs-name">({drug.name})</p>
+			<p className="activeSubs-name">({drug.activeSubstance})</p>
 
 			<div className="img-container">
 				<img
@@ -24,7 +24,7 @@ export const MedicationCard = ({ drug }: CardProps) => {
 				/>
 			</div>
 			<Link className="readMore-link" to={`/${drug.id}`}>
-				Read more
+				Want to know more?
 			</Link>
 
 			<p className="dosag-mobileSize">
@@ -34,7 +34,7 @@ export const MedicationCard = ({ drug }: CardProps) => {
 			{drug.otcDrug ? (
 				<p className="otc-drug">This is an over-the-counter (otc) medicine</p>
 			) : (
-				<></>
+				<p className="otc-drug">You need a prescription for this medicine</p>
 			)}
 		</div>
 	);
