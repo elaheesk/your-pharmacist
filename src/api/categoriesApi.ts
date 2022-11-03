@@ -44,4 +44,5 @@ export const painAndFever = [
 		class: "Migraine",
 	},
 	{ optionValue: "Analgesic & Antipyretic", class: "Analgesic & Antipyretic" },
+	{ optionValue: "Analgesic", class: "Analgesic" },
 ];

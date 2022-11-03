@@ -5,6 +5,7 @@ import { RiArrowLeftLine } from "react-icons/ri";
 import { painAndFever } from "../api/categoriesApi";
 import { DrugType } from "../type";
 import "./page.css";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 export interface IProps {
 	recommendedDrugs: DrugType[];
 }
@@ -12,6 +13,9 @@ export interface IProps {
 const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
 	const [chosenCategories, setChosenCategories] = useState<DrugType[]>([]);
+	const [openDropdown, setOpenDropdown] = useState<boolean>(false);
+	const [categoriesIsTrue, setCategoriesIsTrue] = useState<boolean>(false);
+	const [chosenOptionValue, setChosenOptionValue] = useState<string>("");
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -20,7 +24,6 @@ const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
 				const filteredArrayyyyy = recommendedDrugs.filter(
 					(drug: any) => drug.class === "1"
 				);
-				console.log("filteredArray pain", filteredArrayyyyy);
 
 				setFilteredDrugs(filteredArrayyyyy);
 				setChosenCategories(filteredArrayyyyy);
@@ -35,9 +38,23 @@ const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
 			const filteredArrayyyyy = filteredDrugs.filter((drug: any) =>
 				drug.categories.includes(option)
 			);
-			console.log("should show only sumatri", filteredArrayyyyy);
-
+			for (let i = 0; i < painAndFever.length; i++) {
+				if (painAndFever[i].optionValue === option)
+					setChosenOptionValue(option);
+				setOpenDropdown(false);
+			}
+			setCategoriesIsTrue(true);
 			setChosenCategories(filteredArrayyyyy);
+		}
+	};
+
+	const removeFiltered = () => {
+		if (recommendedDrugs.length !== 0) {
+			const filteredArrayyyyy = recommendedDrugs.filter(
+				(drug: any) => drug.class === "1"
+			);
+			setChosenCategories(filteredArrayyyyy);
+			setCategoriesIsTrue(false);
 		}
 	};
 	return (
@@ -47,17 +64,50 @@ const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
 			</button>
 			<div className="sidebar-card-container">
 				<div className="sidebar-parent">
-					{painAndFever.map((eachCateg, idx) => (
-						<button
-							className="sidebar-options"
-							key={idx}
-							onClick={() => handleChosenCategory(eachCateg.optionValue)}>
-							{eachCateg.optionValue}
+					<div className="breadCrumbs-container">
+						<button className="home-btn" onClick={() => navigate("/")}>
+							Home
 						</button>
-					))}{" "}
+
+						<button className="home-btn" onClick={removeFiltered}>
+							/ Pain & fever
+						</button>
+						{categoriesIsTrue ? (
+							<p className="optionValue">/ {chosenOptionValue}</p>
+						) : (
+							<></>
+						)}
+						{!openDropdown ? (
+							<IoIosArrowForward
+								className="dropdown-icons"
+								style={{ display: categoriesIsTrue ? "none" : "flex" }}
+								onClick={() => setOpenDropdown(true)}
+							/>
+						) : (
+							<IoIosArrowDown
+								className="dropdown-icons"
+								onClick={() => setOpenDropdown(false)}
+							/>
+						)}
+					</div>
+
+					{!categoriesIsTrue && openDropdown && (
+						<div className="hide-if-categories">
+							<>
+								{painAndFever.map((eachCateg, idx) => (
+									<button
+										className="sidebar-options"
+										key={idx}
+										onClick={() => handleChosenCategory(eachCateg.optionValue)}>
+										{eachCateg.optionValue}
+									</button>
+								))}{" "}
+							</>
+						</div>
+					)}
 				</div>
 			</div>
-			<div className="test">
+			<div className="card-parent">
 				{chosenCategories.map((drug, idx) => (
 					<MedicationCard drug={drug} key={idx} />
 				))}

@@ -26,6 +26,7 @@ import { naproxen } from "./naproxen";
 import { noskapin } from "./noskapin";
 import { noskapinSolution } from "./noskapinSolution";
 import { omeprazol } from "./omeprazol";
+import { oxikodon } from "./oxikodon";
 import { oxymetazoline } from "./oxymetazoline";
 import { pantoprazol } from "./pantoprazol";
 import { paracetamol } from "./paracetamol";
@@ -44,6 +45,7 @@ export const medicines = {
 		acetylsalicylsyraTreo,
 		paracetamol,
 		paracetamolKodein,
+		oxikodon,
 		sumatriptan,
 		zolmitriptan,
 		omeprazol,

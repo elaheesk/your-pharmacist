@@ -5,40 +5,47 @@
 .filtrer-sort-container {
 	margin-top: 10px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+	flex-direction: column;
+	position: relative;
+	height: 80px;
 }
 input {
 	display: flex;
-	width: 60%;
+	width: 95%;
 	border: 1px solid gray;
 	border-radius: 5px;
 	padding: 8px;
 	font-size: 18px;
+	margin-bottom: 8px;
 }
 .sort-container {
 	display: flex;
 	flex-direction: column;
 	width: 30%;
-	border: 1px solid gray;
+	/* border: 1px solid gray; */
 	border-radius: 4px;
+	position: absolute;
+	bottom: 0;
 }
 
 .sort-dropdown {
 	display: flex;
 	flex-direction: column;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	/* border: 1px solid gray; */
 }
 .sort-btn {
 	border: none;
 	outline: none;
-	margin: 1px 0;
-	padding: 7px;
+	padding: 5px;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 1px;
 	background-color: rgb(182, 235, 182);
 	color: white;
+	bottom: 0px;
 }
 
 .test {
@@ -49,7 +56,22 @@ input {
 	flex-wrap: wrap;
 	box-sizing: border-box;
 }
-@media only screen and (min-width: 768) {
+@media only screen and (min-width: 768px) {
+	input {
+		display: flex;
+		width: 40%;
+		border: 1px solid gray;
+		border-radius: 5px;
+		padding: 8px;
+		font-size: 18px;
+		margin-bottom: 8px;
+	}
+	.sort-container {
+		display: flex;
+		flex-direction: column;
+		width: 15%;
+		border-radius: 4px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -59,17 +81,22 @@ input {
 
 	.filtrer-sort-container {
 		margin-top: 20px;
+		height: 90px;
 	}
 	input {
-		padding: 18px;
+		padding: 12px;
 		font-size: 20px;
 	}
 
 	.sort-container {
-		width: 20%;
+		width: 13%;
+		top: 55px;
+	}
+	.sort-dropdown {
+		top: 100%;
 	}
 	.sort-btn {
-		padding: 18px;
+		padding: 8px;
 		font-size: 20px;
 	}
 	.prewords-container {
@@ -87,13 +114,18 @@ input {
 
 	.filtrer-sort-container {
 		margin-top: 30px;
+		height: 105px;
 	}
 
 	input {
-		padding: 20px;
+		padding: 15px;
 		font-size: 22px;
+		width: 30%;
 	}
-
+	.sort-container {
+		width: 10%;
+		top: 64px;
+	}
 	.sort-btn {
 		font-size: 22px;
 	}

@@ -48,14 +48,22 @@
 	font-size: 54px;
 	color: white;
 }
+.navBar-title {
+	font-size: 28px;
+	font-weight: bolder;
+	color: white;
+	padding-top: 10px;
+	margin-bottom: 5px;
+	padding-right: 32px;
+}
 .links {
 	padding-right: 32px;
 	display: flex;
 	font-size: 22px;
 	font-weight: bolder;
 	color: white;
-	padding-top: 10px;
-	margin-bottom: 12px;
+	padding-top: 5px;
+	margin-bottom: 10px;
 }
 
 @keyframes fadeInLeft {
@@ -128,11 +136,15 @@
 	.menu-icon {
 		font-size: 58px;
 	}
-
+	.navBar-title {
+		font-size: 32px;
+		padding-top: 20px;
+		margin-bottom: 12px;
+	}
 	.links {
 		font-size: 28px;
-		padding-top: 20px;
-		margin-bottom: 14px;
+		/* padding-top: 10px; */
+		margin-bottom: 10px;
 	}
 }
 @media only screen and (min-width: 992px) {
@@ -150,9 +162,13 @@
 			rgb(131, 208, 131) 100%
 		);
 	}
+	.navBar-title {
+		font-size: 36px;
+		padding-right: 52px;
+	}
 	.links {
 		padding-right: 52px;
-		padding-top: 30px;
+		padding-top: 8px;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -168,9 +184,11 @@
 			rgb(131, 208, 131) 100%
 		);
 	}
-	.links {
-		font-size: 32px;
+	.navBar-title {
+		font-size: 38px;
 		padding-right: 62px;
-		padding-top: 36px;
+	}
+	.links {
+		padding-right: 62px;
 	}
 }

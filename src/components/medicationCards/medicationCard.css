@@ -2,6 +2,8 @@
 	margin-bottom: 30px;
 	margin-top: 30px;
 	width: 100%;
+
+	margin: 5px;
 }
 .drug-name {
 	font-weight: bold;
@@ -10,7 +12,7 @@
 }
 .activeSubs-name {
 	font-size: 12px;
-	line-height: 2px;
+	/* line-height: 2px; */
 }
 
 .img-container {

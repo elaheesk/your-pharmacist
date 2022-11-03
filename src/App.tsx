@@ -1,20 +1,27 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { medicines } from "./api";
-
-import Home from "./pages/home/Home";
-
-import "./App.css";
-import QuestionsAnswers from "./pages/q&a/QuestionsAnswers";
+// import Home from "./pages/home/Home";
 import NavBar from "./components/navBar/NavBar";
-import ColdFluDrugs from "./pages/ColdFluDrugs";
-import StomachIntestinesDrugs from "./pages/StomachIntestinesDrugs";
-import SingleDrug from "./pages/singleDrug/SingleDrug";
+import Loader from "./components/loader/Loader";
+import { medicines } from "./api";
 import { DrugType } from "./type";
-import PainFeverDrugs from "./pages/PainFeverDrugs";
-import PrescriptionDrugs from "./pages/PrescriptionDrugs";
+import "./App.css";
 
 const App = () => {
+	const Home = React.lazy(() => import("./pages/home/Home"));
+	const ColdFluDrugs = React.lazy(() => import("./pages/ColdFluDrugs"));
+	const SingleDrug = React.lazy(() => import("./pages/singleDrug/SingleDrug"));
+	const PainFeverDrugs = React.lazy(() => import("./pages/PainFeverDrugs"));
+	const StomachIntestinesDrugs = React.lazy(
+		() => import("./pages/StomachIntestinesDrugs")
+	);
+	const PrescriptionDrugs = React.lazy(
+		() => import("./pages/PrescriptionDrugs")
+	);
+	const QuestionsAnswers = React.lazy(
+		() => import("./pages/q&a/QuestionsAnswers")
+	);
 	const [recommendedDrugs, setRecommendedDrugs] = useState<DrugType[]>([]);
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const handleClick = (event: any) => {
@@ -25,6 +32,7 @@ const App = () => {
 		console.log("medicines.data", medicines.data);
 		return () => clearTimeout(timer);
 	}, [recommendedDrugs]);
+
 	return (
 		<div onClick={isOpen ? handleClick : undefined} className="app-container">
 			<div className="navBar-parent">
@@ -35,32 +43,68 @@ const App = () => {
 			<Routes>
 				<Route
 					path="/coldflu"
-					element={<ColdFluDrugs recommendedDrugs={recommendedDrugs} />}
-				/>
-				<Route
-					path="/:id"
-					element={<SingleDrug recommendedDrugs={recommendedDrugs} />}
-				/>
-				<Route
-					path="/prescriptiondrugs"
-					element={<PrescriptionDrugs recommendedDrugs={recommendedDrugs} />}
+					element={
+						<Suspense fallback={<Loader />}>
+							<ColdFluDrugs recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
 				/>
 
 				<Route
+					path="/:id"
+					element={
+						<Suspense fallback={<Loader />}>
+							<SingleDrug recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
+				/>
+
+				<Route
+					path="/prescriptiondrugs"
+					element={
+						<Suspense fallback={<Loader />}>
+							<PrescriptionDrugs recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
+				/>
+				<Route
 					path="/painfever"
-					element={<PainFeverDrugs recommendedDrugs={recommendedDrugs} />}
+					element={
+						<Suspense fallback={<Loader />}>
+							<PainFeverDrugs recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
 				/>
 
 				<Route
 					path="/stomach"
 					element={
-						<StomachIntestinesDrugs recommendedDrugs={recommendedDrugs} />
+						<Suspense fallback={<Loader />}>
+							<StomachIntestinesDrugs recommendedDrugs={recommendedDrugs} />
+						</Suspense>
 					}
 				/>
-				<Route path="qa" element={<QuestionsAnswers />} />
 				<Route
+					path="qa"
+					element={
+						<Suspense fallback={<Loader />}>
+							<QuestionsAnswers />
+						</Suspense>
+					}
+				/>
+
+				{/* <Route
 					path="/"
 					element={<Home recommendedDrugs={recommendedDrugs} />}
+				/> */}
+
+				<Route
+					path="/"
+					element={
+						<Suspense fallback={<Loader />}>
+							<Home recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
 				/>
 			</Routes>
 		</div>
