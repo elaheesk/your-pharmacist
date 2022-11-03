@@ -6,6 +6,7 @@ import { painAndFever } from "../api/categoriesApi";
 import { DrugType } from "../type";
 import "./page.css";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { filteredByClass } from "../helperFunctions";
 export interface IProps {
 	recommendedDrugs: DrugType[];
 }
@@ -19,23 +20,17 @@ const PainFeverDrugs = ({ recommendedDrugs }: IProps) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const handleSelectedClass = () => {
-			if (recommendedDrugs.length !== 0) {
-				const filteredArrayyyyy = recommendedDrugs.filter(
-					(drug: any) => drug.class === "1"
-				);
+		if (recommendedDrugs.length > 0) {
+			const returnValue = filteredByClass(recommendedDrugs, "1");
 
-				setFilteredDrugs(filteredArrayyyyy);
-				setChosenCategories(filteredArrayyyyy);
-			}
-		};
-		handleSelectedClass();
+			setChosenCategories(returnValue);
+			setFilteredDrugs(returnValue);
+		}
 	}, [recommendedDrugs]);
 
 	const handleChosenCategory = (option: string) => {
 		if (filteredDrugs.length !== 0) {
-			console.log("option", option);
-			const filteredArrayyyyy = filteredDrugs.filter((drug: any) =>
+			const filteredArrayyyyy = filteredDrugs.filter((drug: DrugType) =>
 				drug.categories.includes(option)
 			);
 			for (let i = 0; i < painAndFever.length; i++) {

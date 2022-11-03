@@ -6,6 +6,7 @@ import { DrugType } from "../type";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import "./page.css";
+import { filteredByClass } from "../helperFunctions";
 interface IColdFlu {
 	recommendedDrugs: DrugType[];
 }
@@ -18,17 +19,11 @@ const ColdFluDrugs = ({ recommendedDrugs }: IColdFlu) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const handleSelectedClass = () => {
-			if (recommendedDrugs.length !== 0) {
-				const filteredArrayyyyy = recommendedDrugs.filter(
-					(drug: DrugType) => drug.class === "2"
-				);
-				setFilteredDrugs(filteredArrayyyyy);
-				setChosenCategories(filteredArrayyyyy);
-				// setCategoriesIsTrue(false);
-			}
-		};
-		handleSelectedClass();
+		if (recommendedDrugs.length > 0) {
+			const returnValue = filteredByClass(recommendedDrugs, "2");
+			setChosenCategories(returnValue);
+			setFilteredDrugs(returnValue);
+		}
 	}, [recommendedDrugs]);
 
 	const handleChosenCategory = (option: string) => {

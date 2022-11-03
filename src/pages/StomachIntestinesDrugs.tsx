@@ -7,6 +7,7 @@ import { IProps } from "./PainFeverDrugs";
 import { RiArrowLeftLine } from "react-icons/ri";
 import "./page.css";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { filteredByClass } from "../helperFunctions";
 
 const StomachIntestinesDrugs = ({ recommendedDrugs }: IProps) => {
 	const [filteredDrugs, setFilteredDrugs] = useState<DrugType[]>([]);
@@ -17,16 +18,12 @@ const StomachIntestinesDrugs = ({ recommendedDrugs }: IProps) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const handleSelectedClass = () => {
-			if (recommendedDrugs.length !== 0) {
-				const filteredArrayyyyy = recommendedDrugs.filter(
-					(drug: any) => drug.class === "3"
-				);
-				setFilteredDrugs(filteredArrayyyyy);
-				setChosenCategories(filteredArrayyyyy);
-			}
-		};
-		handleSelectedClass();
+		if (recommendedDrugs.length > 0) {
+			const returnValue = filteredByClass(recommendedDrugs, "3");
+
+			setChosenCategories(returnValue);
+			setFilteredDrugs(returnValue);
+		}
 	}, [recommendedDrugs]);
 
 	const handleChosenCategory = (option: string) => {
