@@ -1,9 +1,9 @@
 .card-container {
 	margin-bottom: 30px;
 	margin-top: 30px;
-	width: 100%;
-
-	margin: 5px;
+	width: 80%;
+	background-color: red;
+	margin: 1px;
 }
 .drug-name {
 	font-weight: bold;

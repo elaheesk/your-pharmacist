@@ -46,3 +46,8 @@ export interface DrugType {
 	pregnancy: string;
 	breastfeeding: string;
 }
+
+export interface CategoriesOptions {
+	optionValue: string;
+	class: string;
+}

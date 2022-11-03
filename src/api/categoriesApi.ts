@@ -1,20 +1,6 @@
-export const problemsOptions = [
-	{
-		optionValue: "Pain & fever",
-		class: "1",
-	},
-	{
-		optionValue: "Cold & flu",
-		class: "2",
-	},
+import { CategoriesOptions } from "../type";
 
-	{
-		optionValue: "Stomach & Intestines",
-		class: "3",
-	},
-];
-
-export const stomachIssues = [
+export const stomachIssues: CategoriesOptions[] = [
 	{ optionValue: "Diarrhea", class: "Diarrhea" },
 	{ optionValue: "Constipation", class: "Constipation" },
 	{
@@ -24,7 +10,7 @@ export const stomachIssues = [
 	{ optionValue: "Motion sickness", class: "Motion sickness" },
 ];
 
-export const coldAndFlu = [
+export const coldAndFlu: CategoriesOptions[] = [
 	{
 		optionValue: "Nasal congestion & rhinitis",
 		class: "Nasal congestion & rhinitis",
@@ -38,7 +24,7 @@ export const coldAndFlu = [
 		class: "Sore throat",
 	},
 ];
-export const painAndFever = [
+export const painAndFever: CategoriesOptions[] = [
 	{
 		optionValue: "Migraine",
 		class: "Migraine",
