@@ -5,19 +5,14 @@
 	margin: 1px 1px 5px 0;
 	border-radius: 5px;
 	background-color: rgb(237, 247, 237);
-
-	width: 80%;
-	margin: 1px;
 }
 .drug-name {
 	font-weight: bold;
 	font-size: 16px;
-	/* color: rgb(87, 206, 87); */
 }
 .activeSubs-name {
 	font-size: 12px;
 	margin-top: 2px;
-	/* line-height: 2px; */
 }
 
 .img-all-drugs {
