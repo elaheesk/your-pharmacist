@@ -1,10 +1,15 @@
 .card-container {
 	margin-bottom: 30px;
 	margin-top: 30px;
+<<<<<<< HEAD
 	width: 100%;
 	margin: 1px 1px 5px 0;
 	border-radius: 5px;
 	background-color: rgb(237, 247, 237);
+=======
+	width: 80%;
+	margin: 1px;
+>>>>>>> 5546412ec8f272c78ab6253f4deb31afb9f5f402
 }
 .drug-name {
 	font-weight: bold;
