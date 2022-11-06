@@ -20,10 +20,9 @@ const SingleDrug = ({ recommendedDrugs }: PageProps) => {
 	const [mechanismBox, setMechanismBox] = useState<boolean>(false);
 	const [descriptionBoxColor, setDescriptionBoxColor] =
 		useState("rgb(131, 208, 131)");
-	const [dosageBoxColor, setDosageBoxColor] = useState("rgb(182, 235, 182);");
-	const [mechanismBoxColor, setMechanismBoxColor] = useState(
-		"rgb(182, 235, 182);"
-	);
+	const [dosageBoxColor, setDosageBoxColor] = useState("rgb(182, 235, 182)");
+	const [mechanismBoxColor, setMechanismBoxColor] =
+		useState("rgb(182, 235, 182)");
 	useEffect(() => {
 		const getDrug = () => {
 			if (recommendedDrugs.length !== 0) {
@@ -37,9 +36,7 @@ const SingleDrug = ({ recommendedDrugs }: PageProps) => {
 
 		getDrug();
 	}, [recommendedDrugs]);
-	singleDrug.map((dr) =>
-		console.log("length of the drug", dr.description.length, dr.name)
-	);
+
 	const handleDescriptionBox = () => {
 		setDescriptionBox(true);
 		setDosageBox(false);
@@ -65,6 +62,8 @@ const SingleDrug = ({ recommendedDrugs }: PageProps) => {
 		setDosageBoxColor("rgb(182, 235, 182)");
 	};
 	const navigate = useNavigate();
+	console.log("showalert", showAlert);
+
 	return (
 		<>
 			<div className="singleDrug-container">
@@ -154,21 +153,16 @@ const SingleDrug = ({ recommendedDrugs }: PageProps) => {
 							</div>
 						</div>
 
-						{showAlert ? (
-							<Popup drug={drug} setShowAlert={setShowAlert} />
+						{!showAlert ? (
+							<button
+								id="interaction-btn"
+								onClick={() => setShowAlert(!showAlert)}>
+								Interactions with other drugs
+							</button>
 						) : (
-							<></>
+							<Popup drug={drug} setShowAlert={setShowAlert} />
 						)}
 						<div className="interactions-btn-container">
-							{!showAlert ? (
-								<button
-									className="interaction-btn"
-									onClick={() => setShowAlert(!showAlert)}>
-									Interactions with other drugs
-								</button>
-							) : (
-								<></>
-							)}
 							<Accordion drug={drug} />
 						</div>
 					</div>

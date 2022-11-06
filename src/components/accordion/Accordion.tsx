@@ -9,23 +9,17 @@ const Accordion = ({ drug }: IAccordionProps) => {
 	const [toggleOne, setToggleOne] = useState<boolean>(false);
 	const [toggleTwo, setToggleTwo] = useState<boolean>(false);
 	const [toggleThree, setToggleThree] = useState<boolean>(false);
-	const [toggleFour, setToggleFour] = useState<boolean>(false);
 
-	const [toggleOneColor, setToggleOneColor] =
-		useState<string>("rgb(151, 225, 151)");
-	const [toggleTwoColor, setToggleTwoColor] =
-		useState<string>("rgb(151, 225, 151)");
-	const [toggleThreeColor, setToggleThreeColor] =
-		useState<string>("rgb(151, 225, 151)");
-	const [toggleFourColor, setToggleFourColor] =
-		useState<string>("rgb(151, 225, 151)");
+	const [toggleFour, setToggleFour] = useState<boolean>(false);
 
 	return (
 		<div className="accordion-container">
 			{" "}
 			<button
 				style={{
-					backgroundColor: toggleOne ? "rgb(87, 206, 87)" : toggleOneColor,
+					backgroundColor: toggleOne
+						? "rgb(87, 206, 87)"
+						: "rgb(151, 225, 151)",
 				}}
 				onClick={() => setToggleOne(!toggleOne)}
 				className="accordion-btn">
@@ -44,7 +38,9 @@ const Accordion = ({ drug }: IAccordionProps) => {
 			)}
 			<button
 				style={{
-					backgroundColor: toggleTwo ? "rgb(87, 206, 87)" : toggleTwoColor,
+					backgroundColor: toggleTwo
+						? "rgb(87, 206, 87)"
+						: "rgb(151, 225, 151)",
 				}}
 				onClick={() => setToggleTwo(!toggleTwo)}
 				className="accordion-btn">
@@ -70,7 +66,9 @@ const Accordion = ({ drug }: IAccordionProps) => {
 			)}
 			<button
 				style={{
-					backgroundColor: toggleThree ? "rgb(87, 206, 87)" : toggleThreeColor,
+					backgroundColor: toggleThree
+						? "rgb(87, 206, 87)"
+						: "rgb(151, 225, 151)",
 				}}
 				onClick={() => setToggleThree(!toggleThree)}
 				className="accordion-btn">
@@ -105,16 +103,21 @@ const Accordion = ({ drug }: IAccordionProps) => {
 			)}
 			<button
 				style={{
-					backgroundColor: toggleFour ? "rgb(87, 206, 87)" : toggleFourColor,
+					backgroundColor: toggleFour
+						? "rgb(87, 206, 87)"
+						: "rgb(151, 225, 151)",
 				}}
 				onClick={() => setToggleFour(!toggleFour)}
 				className="accordion-btn">
-				{" "}
-				Mechanism of action?
+				When not to take this medicine?
 			</button>
 			{toggleFour ? (
 				<div className="sideEffects-container">
-					<p className="pregnancy-text">{drug.pharmacodynamics}</p>
+					{drug.contraindications.map((contradiction, idx) => (
+						<p className="sideEffect-text" key={idx}>
+							*{contradiction}
+						</p>
+					))}
 				</div>
 			) : (
 				<></>

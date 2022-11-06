@@ -73,7 +73,13 @@
 .dosage-parent {
 	padding-top: 10px;
 }
-
+#interaction-btn {
+	margin-top: 20px;
+	width: 100%;
+	border-radius: 10px;
+	background-color: transparent;
+	padding: 10px;
+}
 @media only screen and (min-width: 600px) {
 	.small-img-box-container {
 		flex-direction: row;
@@ -94,11 +100,11 @@
 	.box-information-parent {
 		width: 69%;
 	}
-	.interaction-btn {
-		margin-top: 20px;
+
+	#interaction-btn {
 		width: 60%;
 	}
-	.interaction-btn :hover {
+	#interaction-btn :hover {
 		color: black;
 	}
 }
@@ -115,7 +121,7 @@
 	.drug-description {
 		font-size: 14px;
 	}
-	.interaction-btn {
+	#interaction-btn {
 		margin-top: 20px;
 		width: 50%;
 	}
@@ -130,7 +136,7 @@
 	.drug-description {
 		font-size: 16px;
 	}
-	.interaction-btn {
+	#interaction-btn {
 		margin-top: 20px;
 		width: 40%;
 	}
@@ -150,7 +156,7 @@
 	.drug-description {
 		font-size: 16px;
 	}
-	.interaction-btn {
+	#interaction-btn {
 		margin-top: 20px;
 		width: 40%;
 	}

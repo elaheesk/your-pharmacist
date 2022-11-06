@@ -18,6 +18,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	padding-left: 10px;
 }
 .home-btn {
 	border: none;
@@ -48,6 +49,7 @@
 }
 
 .card-parent {
+	padding: 15px;
 }
 @media only screen and (min-width: 768px) {
 	.sidebar-card-container {

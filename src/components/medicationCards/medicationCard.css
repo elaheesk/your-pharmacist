@@ -1,9 +1,10 @@
 .card-container {
 	margin-bottom: 30px;
 	margin-top: 30px;
-	width: 80%;
-	background-color: red;
-	margin: 1px;
+	width: 100%;
+	margin: 1px 1px 5px 0;
+	border-radius: 5px;
+	background-color: rgb(237, 247, 237);
 }
 .drug-name {
 	font-weight: bold;
@@ -12,19 +13,17 @@
 }
 .activeSubs-name {
 	font-size: 12px;
+	margin-top: 2px;
 	/* line-height: 2px; */
 }
 
-.img-container {
-	padding-top: 10px;
-}
-
 .img-all-drugs {
-	height: 130px;
-	width: 100%;
+	height: 120px;
+	width: 60%;
 	transform: scale(0.8, 1.2);
 	margin: 10px 0 14px 0;
 	transform: scale(0.6, 0.9);
+	display: flex;
 }
 
 .btn-minage-container {
@@ -36,12 +35,14 @@
 .dosag-mobileSize {
 	display: flex;
 	margin-top: 8px;
+	margin-bottom: 2px;
 	font-size: 14px;
 }
 
 .otc-drug {
 	font-style: italic;
 	font-size: 14px;
+	margin-top: 2px;
 }
 
 .interaction-btn {
@@ -86,7 +87,7 @@
 
 	.img-all-drugs {
 		display: flex;
-		height: 150px;
+		height: 120px;
 		transform: scale(0.5, 1);
 	}
 	.readMore-link {
@@ -99,14 +100,12 @@
 
 	.otc-drug {
 		font-size: 14px;
-		margin-top: 10px;
+		margin-top: 8px;
 	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	.card-container {
-	}
 	.drug-name {
 		font-size: 20px;
 	}
@@ -115,7 +114,6 @@
 	}
 
 	.img-all-drugs {
-		height: 130px;
 		transform: scale(0.7, 1);
 	}
 
@@ -140,8 +138,8 @@
 		width: 80%;
 	}
 	.img-all-drugs {
-		height: 150px;
 		transform: scale(0.5, 0.8);
+		height: 100px;
 	}
 
 	.dosag-mobileSize {

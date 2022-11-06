@@ -72,6 +72,10 @@ input {
 		width: 15%;
 		border-radius: 4px;
 	}
+	.prewords {
+		font-size: 16px;
+		line-height: 23px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -102,10 +106,6 @@ input {
 	.prewords-container {
 		margin: 40px 0;
 	}
-	.prewords {
-		font-size: 20px;
-		line-height: 25px;
-	}
 }
 @media only screen and (min-width: 1200px) {
 	.main-container {
@@ -130,7 +130,7 @@ input {
 		font-size: 22px;
 	}
 	.prewords {
-		font-size: 20px;
-		line-height: 40px;
+		font-size: 18px;
+		line-height: 30px;
 	}
 }

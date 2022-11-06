@@ -26,9 +26,10 @@
 }
 .sideEffect-text {
 	display: inline-block;
-	line-height: 0;
+	/* line-height: 0; */
 	font-size: 14px;
 	padding: 0 2px;
+	margin: 1px 0;
 }
 
 .pregnancy-text {
@@ -40,6 +41,7 @@
 .omeprazol-text {
 	font-size: 14px;
 }
+
 @media only screen and (min-width: 992px) {
 	.accordion-btn {
 		font-size: 18px;
