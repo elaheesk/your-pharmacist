@@ -25,6 +25,7 @@ const HeaderComponent = ({
 	diseaseCategory,
 }: IProps) => {
 	const navigate = useNavigate();
+
 	return (
 		<>
 			{" "}

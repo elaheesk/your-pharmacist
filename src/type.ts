@@ -51,3 +51,15 @@ export interface CategoriesOptions {
 	optionValue: string;
 	class: string;
 }
+
+export interface ISubCategories {
+	id: number;
+	subCategory: CategoriesOptions[];
+}
+
+export interface AllSubCategories {
+	optionValue: string;
+	class: string;
+	cause: string;
+	treatment: string;
+}

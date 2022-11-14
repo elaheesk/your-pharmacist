@@ -20,6 +20,9 @@
 	align-items: center;
 	padding-left: 10px;
 }
+.hide-if-categories {
+	padding-left: 10px;
+}
 .home-btn {
 	border: none;
 	outline: none;

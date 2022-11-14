@@ -39,9 +39,15 @@ const NavBar = ({ isOpen, setIsOpen }: IProps) => {
 					<Link className="links" to="/stomach">
 						Stomach & Intestines
 					</Link>
+					<Link className="links" to="/allergy">
+						Allergy
+					</Link>
 					<h2 className="navBar-title">Prescription drugs</h2>
 					<Link className="links" to="/prescriptiondrugs">
 						Prescription drugs
+					</Link>
+					<Link className="links" to="/advice">
+						Advice from the pharmacist
 					</Link>
 					<Link className="links" to="/qa">
 						Q&A

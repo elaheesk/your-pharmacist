@@ -9,12 +9,11 @@ interface CardProps {
 
 export const MedicationCard = ({ drug }: CardProps) => {
 	const navigate = useNavigate();
+
 	return (
 		<div className="card-container" key={drug?.id}>
 			<label className="drug-name">{drug.name}</label>
-
 			<p className="activeSubs-name">({drug.activeSubstance})</p>
-
 			<div className="img-container">
 				<img
 					className="img-all-drugs"
@@ -26,7 +25,6 @@ export const MedicationCard = ({ drug }: CardProps) => {
 			<Link className="readMore-link" to={`/${drug.id}`}>
 				Want to know more?
 			</Link>
-
 			<p className="dosag-mobileSize">
 				{drug?.dosage} {drug?.quantity}
 			</p>

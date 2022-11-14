@@ -8,20 +8,24 @@
 //class:8 =Antimykotikum AND glukokortikoid
 //class:9 =Contraceptives
 
+import { levokabastin } from "./ levokabastin";
 import { acetylsalicylsyraTreo } from "./acetylsalicylsyraTreo";
 import { bisakodyl } from "./bisakodyl";
 import { bromhexin } from "./bromhexin";
 import { bromhexinEfedrin } from "./bromhexinEfedrin";
 import { calciumMagnesiumCarbonate } from "./calciumMagnesiumCarbonate";
+import { desloratadin } from "./desloratadin";
 import { dimenhydrinat } from "./dimenhydrinat";
 import { etylmorfin } from "./etylmorfin";
 import { flurbiprofen } from "./flurbiprofen";
 import { ibuprofen } from "./ibuprofen";
 import { lactulose } from "./lactulose";
+import { levokabastinNoseDrops } from "./levokabastinNoseDrops";
 import { loperamid } from "./loperamid";
 import { makrogol } from "./makrogol";
 import { meklozin } from "./meklozin";
 import { mometasone } from "./mometasone";
+import { mometasoneAllergy } from "./mometasoneAllergy";
 import { naproxen } from "./naproxen";
 import { noskapin } from "./noskapin";
 import { noskapinSolution } from "./noskapinSolution";
@@ -67,5 +71,9 @@ export const medicines = {
 		bromhexinEfedrin,
 		flurbiprofen,
 		mometasone,
+		desloratadin,
+		levokabastin,
+		levokabastinNoseDrops,
+		mometasoneAllergy,
 	],
 };

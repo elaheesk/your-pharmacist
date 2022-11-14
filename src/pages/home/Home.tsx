@@ -33,17 +33,14 @@ const Home = ({ recommendedDrugs }: PageProps) => {
 	const strAscending = () => {
 		const copyArray = [...filteredDrugs];
 		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? 1 : -1));
-		console.log("asc", sortedArr);
 		setFilteredDrugs(sortedArr);
 		setAscSortColor("rgb(87, 206, 87)");
 		setDscSortColor("rgb(182, 235, 182)");
 	};
 
-	// 👇️ sort by String property DESCENDING (Z - A)
 	const strDescending = () => {
 		const copyArray = [...filteredDrugs];
 		const sortedArr = copyArray.sort((a, b) => (a.name > b.name ? -1 : 1));
-		console.log("dsc", sortedArr);
 		setFilteredDrugs(sortedArr);
 		setDscSortColor("rgb(87, 206, 87)");
 		setAscSortColor("rgb(182, 235, 182)");

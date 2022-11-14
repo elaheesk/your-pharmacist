@@ -1,0 +1,33 @@
+.singleOptions-parent {
+	padding: 110px 10px 10px 10px;
+	display: flex;
+	width: 96%;
+	flex-direction: column;
+}
+
+.go-back-btn {
+	border: none;
+	outline: none;
+	background-color: white;
+	font-size: 14px;
+	align-self: flex-start;
+}
+
+.subCategory-card {
+	border: 1px solid gray;
+	padding: 10px;
+	margin: 5px 0;
+	width: 65%;
+	border-radius: 5px;
+	text-align: center;
+}
+.cause-treatment-container {
+	padding: 10px 0;
+	margin-top: 10px;
+}
+.cause-treatment-question {
+	font-weight: bold;
+}
+.cause-treatment-text {
+	margin-top: 5px;
+}

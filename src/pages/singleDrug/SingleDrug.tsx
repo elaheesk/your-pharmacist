@@ -62,7 +62,6 @@ const SingleDrug = ({ recommendedDrugs }: PageProps) => {
 		setDosageBoxColor("rgb(182, 235, 182)");
 	};
 	const navigate = useNavigate();
-	console.log("showalert", showAlert);
 
 	return (
 		<>

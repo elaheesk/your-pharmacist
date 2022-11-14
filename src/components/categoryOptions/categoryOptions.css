@@ -1,0 +1,20 @@
+.category-container {
+	width: 45%;
+	align-items: center;
+	margin: 1px 1px 5px 0;
+	justify-content: space-evenly;
+	padding: 0 5px;
+	border-radius: 5px;
+	display: flex;
+	max-height: 50%;
+	border: 1px solid rgb(222, 243, 222);
+}
+.options-icons {
+	font-size: 28px;
+}
+.option-name {
+	font-size: 20px;
+	padding-left: 5px;
+}
+@media only screen and (min-width: 600px) {
+}

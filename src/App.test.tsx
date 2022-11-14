@@ -4,10 +4,8 @@ import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 
 import Home from "./pages/home/Home";
 import Popup from "./components/popup/Popup";
-import { medicines } from "./api";
 import { DrugType } from "./type";
-// import ColdFlu from "./pages/ColdFluDrugs";
-import PainFever from "./pages/PainFeverDrugs";
+import ColdFluDrugs from "./pages/ColdFluDrugs";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -35,7 +33,7 @@ const drug = {
 	description: "",
 	interactions: [],
 	sideEffects: [],
-
+	infants: false,
 	adults: false,
 	minAge: "",
 	pregnancy: "",
@@ -48,7 +46,6 @@ const drug = {
 	maxDose: "",
 	withMeal: false,
 	betweenMeals: false,
-	infants: false,
 };
 
 test("renders the home page", () => {
@@ -75,13 +72,14 @@ it("expect to open the popup when button is clicked", () => {
 	};
 });
 
-// test("Should navigate to COld&Flu page when button is clicked", () => {
-// 	() => {
-// 		const navigateBtn = screen.getByText("cold & flu");
-// 		fireEvent.click(navigateBtn);
-// 		mockedUsedNavigate("/coldflnnnu");
-// 		render(<ColdFlu recommendedDrugs={drug} />);
-// 		const subtitle = screen.getByText(/Paracetamol/i);
-// 		expect(subtitle).toBeInTheDocument();
-// 	};
-// });
+test("Should navigate to COld&Flu page when button is clicked", () => {
+	() => {
+		const navigateBtn = screen.getByText("cold & flu");
+		const recommendedDrugs: DrugType[] = [];
+		fireEvent.click(navigateBtn);
+		mockedUsedNavigate("/coldflnnnu");
+		render(<ColdFluDrugs recommendedDrugs={recommendedDrugs} />);
+		const subtitle = screen.getByText(/Paracetamol/i);
+		expect(subtitle).toBeInTheDocument();
+	};
+});

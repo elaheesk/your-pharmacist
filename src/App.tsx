@@ -7,6 +7,9 @@ import Loader from "./components/loader/Loader";
 import { medicines } from "./api";
 import { DrugType } from "./type";
 import "./App.css";
+import SingleOptionsPage from "./pages/singleOptionsPage/SingleOptionsPage";
+import { categoriesAndSubCategories } from "./api/categoriesApi";
+import AllergyDrugs from "./pages/AllergyDrugs";
 
 const App = () => {
 	const Home = React.lazy(() => import("./pages/home/Home"));
@@ -22,6 +25,7 @@ const App = () => {
 	const QuestionsAnswers = React.lazy(
 		() => import("./pages/q&a/QuestionsAnswers")
 	);
+	const AdvicePage = React.lazy(() => import("./pages/advicePage/AdvicePage"));
 	const [recommendedDrugs, setRecommendedDrugs] = useState<DrugType[]>([]);
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const handleClick = (event: any) => {
@@ -50,6 +54,16 @@ const App = () => {
 					}
 				/>
 
+				<Route
+					path="/options/:optionId"
+					element={
+						<Suspense fallback={<Loader />}>
+							<SingleOptionsPage
+								categoriesAndSubCategories={categoriesAndSubCategories}
+							/>
+						</Suspense>
+					}
+				/>
 				<Route
 					path="/:id"
 					element={
@@ -85,6 +99,23 @@ const App = () => {
 					}
 				/>
 				<Route
+					path="/allergy"
+					element={
+						<Suspense fallback={<Loader />}>
+							<AllergyDrugs recommendedDrugs={recommendedDrugs} />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="advice"
+					element={
+						<Suspense fallback={<Loader />}>
+							<AdvicePage />
+						</Suspense>
+					}
+				/>
+
+				<Route
 					path="qa"
 					element={
 						<Suspense fallback={<Loader />}>
@@ -92,11 +123,6 @@ const App = () => {
 						</Suspense>
 					}
 				/>
-
-				{/* <Route
-					path="/"
-					element={<Home recommendedDrugs={recommendedDrugs} />}
-				/> */}
 
 				<Route
 					path="/"
